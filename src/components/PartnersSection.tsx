@@ -3,7 +3,7 @@ import { Building, Users } from "lucide-react";
 
 export default function PartnersSection() {
   return (
-    <section className="py-16 bg-gradient-to-b bg-gray-900 to-black">
+    <section className="py-16 bg-gradient-to-b bg-black to-gray-900">
       <div
         className="container mx-auto px-4 max-w-3xl"
         data-aos="fade-up"

@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import BuyOrSell from "../components/BuyOrSell";
 import SoldItems from "../components/SoldItems";
 import PartnersSection from "../components/PartnersSection";
+import Benefits from "../components/Benefits";
 
 export default function Home() {
   useEffect(() => {
@@ -20,6 +21,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-50">
       <Hero />
       <BuyOrSell />
+      <Benefits />
       <SoldItems />
       <PartnersSection />
     </main>

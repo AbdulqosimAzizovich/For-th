@@ -21,11 +21,11 @@ export default function BuyOrSell() {
           >
             <div className="flex flex-col h-full">
               <h3 className="text-2xl font-semibold mb-6 text-gray-100 text-center">
-                I want to sell my logistics business
+                I want to sell my trucking business
               </h3>
 
               <p className="text-gray-300 mb-6 text-center">
-                List your logistics company on our secure marketplace. We
+                List your trucking company on our secured marketplace. We
                 provide valuation and transaction support.
               </p>
 
@@ -59,12 +59,12 @@ export default function BuyOrSell() {
           >
             <div className="flex flex-col h-full">
               <h3 className="text-2xl font-semibold mb-6 text-gray-100 text-center">
-                I want to buy a logistics business
+                I want to buy Aged MC authority
               </h3>
 
               <p className="text-gray-300 mb-6 text-center">
-                Purchase verified logistics companies with confidence through
-                our secure platform.
+                Purchase now from verified trucking owners with confidence
+                through our secure platform
               </p>
 
               <div className="space-y-4 mb-8">
