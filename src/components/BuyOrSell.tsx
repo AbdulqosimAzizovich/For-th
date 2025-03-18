@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function BuyOrSell() {
   return (
-    <section className="py-20 bg-black text-white">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="py-20 bg-black text-white ">
+      <div className="container mx-auto px-4 max-w-4xl overflow-x-hidden">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl font-bold text-white">
             Would you like to buy or sell logistics companies?
