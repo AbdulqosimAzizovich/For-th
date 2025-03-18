@@ -1,9 +1,9 @@
 // components/Hero.tsx
-import { ChevronDown, Truck, ArrowRight } from "lucide-react";
+import { ChevronDown, Truck } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-gray-900 bg-gradient-to-b to-black text-white py-24">
+    <section className="bg-gray-900 bg-gradient-to-b to-black text-white py-48">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto" data-aos="fade-up">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -13,36 +13,16 @@ export default function Hero() {
               data-aos-delay="100"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                The Marketplace for Logistics Companies
+                Who we are ?
               </h1>
 
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start">
-                  <div className="bg-gray-700 p-1 rounded-full mt-1 mr-3">
-                    <ArrowRight size={16} className="text-white" />
-                  </div>
-                  <p className="text-lg">
-                    <span className="font-semibold">Who We Are:</span> Leading
-                    marketplace for buying and selling logistics businesses
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-gray-700 p-1 rounded-full mt-1 mr-3">
-                    <ArrowRight size={16} className="text-white" />
-                  </div>
-                  <p className="text-lg">
-                    <span className="font-semibold">What We Do:</span> Connect
-                    buyers with MC, DOT, and Amazon transportation companies
-                  </p>
-                </li>
-                <li className="flex items-start">
-                  <div className="bg-gray-700 p-1 rounded-full mt-1 mr-3">
-                    <ArrowRight size={16} className="text-white" />
-                  </div>
-                  <p className="text-lg">
-                    <span className="font-semibold">Our Services:</span>{" "}
-                    Business valuation, transaction management, and compliance
-                    support
+                  <p className="text-xl">
+                    Professional service dedicated to assisting clients in
+                    purchasing aged MC authority, with or without Amazon Relay.
+                    Our expertise ensures efficient process tailored to meet
+                    your business needs.
                   </p>
                 </li>
               </ul>
