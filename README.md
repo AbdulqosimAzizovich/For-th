@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# For-th
+
+## Overview
+For-th is a web application built using modern frontend technologies, designed to provide a seamless and interactive user experience.
+
+## Technologies Used
+- **Next.js** - React framework for production-grade applications.
+- **TypeScript** - Enhances code quality and maintainability.
+- **Tailwind CSS** - Utility-first CSS framework for fast styling.
+- **AOS (Animate On Scroll)** - Used for scroll-based animations.
+- **Framer Motion** - For smooth animations and transitions.
+- **Lucide React** - Icon library for a modern UI.
+- **ESLint** - Ensures code quality and consistency.
+- **Prettier** - Code formatting for a cleaner codebase.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/AbdulqosimAzizovich/For-th.git
+   cd For-th
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should now be available at `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is temporarily open-source for development and feedback purposes. Future updates may transition it to a closed-source model.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The project is hosted on **Vercel** and can be accessed at [For-th](https://for-th.vercel.app/).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+This project is temporarily open-source and will not remain so after several upcoming updates.
