@@ -8,7 +8,7 @@ export default function BuyOrSell() {
       <div className="container mx-auto px-4 max-w-4xl overflow-x-hidden">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl font-bold text-white">
-            Would you like to buy or sell logistics companies?
+            Are you looking to buy or sell a trucking company ?
           </h2>
         </div>
 
@@ -21,7 +21,7 @@ export default function BuyOrSell() {
           >
             <div className="flex flex-col h-full">
               <h3 className="text-2xl font-semibold mb-6 text-gray-100 text-center">
-                I want to sell my trucking business
+                I am looking to sell my trucking company
               </h3>
 
               <p className="text-gray-300 mb-6 text-center">
