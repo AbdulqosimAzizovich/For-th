@@ -25,3 +25,37 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-bg {
+  background-image: url("../../public/5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.benefit-bg {
+  background-image: url("../../public/Hero1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.help-bg {
+  background-image: url("../../public/4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

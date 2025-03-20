@@ -55,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/buy"
+                  href="/buy-companies"
                   className="text-gray-400 hover:text-white transition"
                 >
                   Buy MC
@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/sell"
+                  href="/sell-companies"
                   className="text-gray-400 hover:text-white transition"
                 >
                   Sell MC

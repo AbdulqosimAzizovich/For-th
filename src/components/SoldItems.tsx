@@ -21,26 +21,26 @@ export default function SoldItems() {
 
   // Sample company data - replace with your actual companies
   const companies: Company[] = [
-    { id: 1, name: "Company 1", logo: "/next.svg" },
-    { id: 2, name: "Company 2", logo: "/next.svg" },
-    { id: 3, name: "Company 3", logo: "/next.svg" },
-    { id: 4, name: "Company 4", logo: "/next.svg" },
-    { id: 5, name: "Company 5", logo: "/next.svg" },
-    { id: 6, name: "Company 6", logo: "/next.svg" },
-    { id: 7, name: "Company 7", logo: "/next.svg" },
-    { id: 8, name: "Company 8", logo: "/next.svg" },
-    { id: 9, name: "Company 9", logo: "/next.svg" },
-    { id: 10, name: "Company 10", logo: "/next.svg" },
-    { id: 11, name: "Company 11", logo: "/next.svg" },
-    { id: 12, name: "Company 12", logo: "/next.svg" },
-    { id: 13, name: "Company 13", logo: "/next.svg" },
-    { id: 14, name: "Company 14", logo: "/next.svg" },
-    { id: 15, name: "Company 15", logo: "/next.svg" },
-    { id: 16, name: "Company 16", logo: "/next.svg" },
-    { id: 17, name: "Company 17", logo: "/next.svg" },
-    { id: 18, name: "Company 18", logo: "/next.svg" },
-    { id: 19, name: "Company 19", logo: "/next.svg" },
-    { id: 20, name: "Company 20", logo: "/next.svg" },
+    { id: 1, name: "Company 1", logo: "/Greenland.jpg" },
+    { id: 2, name: "Company 2", logo: "/Afsu.jpg" },
+    { id: 3, name: "Company 3", logo: "/Ik.jpg" },
+    { id: 4, name: "Company 4", logo: "/Minessota.jpg" },
+    { id: 5, name: "Company 5", logo: "/Wa.JPEG" },
+    { id: 6, name: "Company 6", logo: "/X9.png" },
+    { id: 7, name: "Company 7", logo: "/Afsu.jpg" },
+    { id: 8, name: "Company 8", logo: "/Karnab.jpg" },
+    { id: 9, name: "Company 9", logo: "/Ik.jpg" },
+    { id: 10, name: "Company 10", logo: "/Minessota.jpg" },
+    { id: 11, name: "Company 11", logo: "/Wa.JPEG" },
+    { id: 12, name: "Company 12", logo: "/X9.png" },
+    { id: 13, name: "Company 13", logo: "/Greenland.jpg" },
+    { id: 14, name: "Company 14", logo: "/Karnab.jpg" },
+    { id: 15, name: "Company 15", logo: "/Ik.jpg" },
+    { id: 16, name: "Company 16", logo: "/Minessota.jpg" },
+    { id: 17, name: "Company 17", logo: "/Wa.JPEG" },
+    { id: 18, name: "Company 18", logo: "/X9.png" },
+    { id: 19, name: "Company 19", logo: "/Greenland.jpg" },
+    { id: 20, name: "Company 20", logo: "/Karnab.jpg" },
   ];
 
   // Handle responsive layout
@@ -150,19 +150,19 @@ export default function SoldItems() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b bg-gray-900 text-white to-black">
+    <section className="py-16 bg-gradient-to-b bg-black text-white ">
       <div
         ref={containerRef}
         className="container mx-auto px-4 max-w-4xl"
         data-aos="fade-up"
         data-aos-delay="100"
       >
-        <div className="bg-gradient-to-br from-gray-800 to-gray-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-[#2563EB]">
-            We Sold these MC, DOT with Amazon
+        <div className="bg-gray-900/70 text-white p-6 sm:p-8 rounded-2xl shadow-xl">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] to-blue-200">
+            Here are the partner compaines that we work with:
           </h2>
 
-          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+          {/* <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
             <div className="bg-gray-700 bg-opacity-50 px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center backdrop-blur-sm transition-all duration-300 hover:bg-opacity-70">
               <Check size={18} className="mr-2 sm:mr-3 text-green-400" />
               <span className="text-sm sm:text-base font-medium">
@@ -175,7 +175,7 @@ export default function SoldItems() {
                 will be rotating
               </span>
             </div>
-          </div>
+          </div> */}
 
           {/* Company logos slider */}
           <div
@@ -218,9 +218,9 @@ export default function SoldItems() {
                                     />
                                   </div>
                                 </div>
-                                <p className="text-xs sm:text-sm mt-2 sm:mt-3 text-center font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
+                                {/* <p className="text-xs sm:text-sm mt-2 sm:mt-3 text-center font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
                                   {company.name}
-                                </p>
+                                </p> */}
                               </div>
                             ));
                         }
@@ -234,7 +234,7 @@ export default function SoldItems() {
             {/* Navigation buttons */}
             <button
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-80 p-2 sm:p-3 rounded-full z-10 hover:bg-opacity-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute left-0 top-[calc(50%-45px)] bg-gray-800 bg-opacity-80 p-2 sm:p-3 rounded-full z-10 hover:bg-opacity-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"
               aria-label="Previous slide"
             >
               <ChevronLeft size={20} className="text-gray-100" />
@@ -242,7 +242,7 @@ export default function SoldItems() {
 
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-80 p-2 sm:p-3 rounded-full z-10 hover:bg-opacity-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute right-0 top-[calc(50%-45px)] bg-gray-800 bg-opacity-80 p-2 sm:p-3 rounded-full z-10 hover:bg-opacity-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"
               aria-label="Next slide"
             >
               <ChevronRight size={20} className="text-gray-100" />

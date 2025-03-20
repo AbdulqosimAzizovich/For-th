@@ -13,7 +13,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold">
-            Vabank MC
+            Vabank MC Sale
           </Link>
         </div>
 
@@ -27,34 +27,34 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/about" className="hover:text-gray-400 transition">
+          <Link href="/about" className="hover:text-blue-400 transition">
             About us
           </Link>
-          <Link href="/services" className="hover:text-gray-400 transition">
+          <Link href="/services" className="hover:text-blue-400 transition">
             Services
           </Link>
-          <Link href="/blog" className="hover:text-gray-400 transition">
+          <Link href="/blog" className="hover:text-blue-400 transition">
             Blog
           </Link>
-          <Link href="/contacts" className="hover:text-gray-400 transition">
+          <Link href="/contacts" className="hover:text-blue-400 transition">
             Contacts
           </Link>
           <div className="flex space-x-4">
             <Link
               href="https://instagram.com"
-              className="hover:text-gray-400 transition"
+              className="hover:text-blue-400 transition"
             >
               <Instagram size={20} />
             </Link>
             <Link
               href="https://youtube.com"
-              className="hover:text-gray-400 transition"
+              className="hover:text-blue-400 transition"
             >
               <Youtube size={20} />
             </Link>
             <Link
               href="https://t.me"
-              className="hover:text-gray-400 transition"
+              className="hover:text-blue-400 transition"
             >
               <Send size={20} />
             </Link>
@@ -67,44 +67,44 @@ export default function Header() {
             <div className="flex flex-col p-4">
               <Link
                 href="/about"
-                className="py-2 hover:text-gray-400 transition"
+                className="py-2 hover:text-blue-400 transition"
               >
                 About us
               </Link>
               <Link
                 href="/services"
-                className="py-2 hover:text-gray-400 transition"
+                className="py-2 hover:text-blue-400 transition"
               >
                 Services
               </Link>
               <Link
                 href="/location"
-                className="py-2 hover:text-gray-400 transition"
+                className="py-2 hover:text-blue-400 transition"
               >
                 Location
               </Link>
               <Link
                 href="/contacts"
-                className="py-2 hover:text-gray-400 transition"
+                className="py-2 hover:text-blue-400 transition"
               >
                 Contacts
               </Link>
               <div className="flex space-x-4 py-2">
                 <Link
                   href="https://instagram.com"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-blue-400 transition"
                 >
                   <Instagram size={20} />
                 </Link>
                 <Link
                   href="https://youtube.com"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-blue-400 transition"
                 >
                   <Youtube size={20} />
                 </Link>
                 <Link
                   href="https://t.me"
-                  className="hover:text-gray-400 transition"
+                  className="hover:text-blue-400 transition"
                 >
                   <Send size={20} />
                 </Link>

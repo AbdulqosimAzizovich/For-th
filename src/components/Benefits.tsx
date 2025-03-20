@@ -52,11 +52,21 @@ export default function Benefits() {
       description:
         "Since the authority has been around for a while, it signals that the company may have been compliant with FMCSA regulations for longer, reducing risk for others in the supply chain.",
     },
+    {
+      title: "Easier to work with Amazon with Aged MC Authoriity. ",
+      description:
+        "Most people prefer to work with Amazon relay, so with Aged MC authority you will have more chance to get approved by Amazon team. Or you can buy MC authority from us that has already been working with Amazon.",
+    },
   ];
 
   return (
-    <section className="bg-gradient-to-b bg-black text-white to-gray-900 py-16">
-      <div className="container mx-auto px-4">
+    <section className="relative bg-gradient-to-b bg-black text-white to-gray-900 py-16">
+      <div className="absolute inset-0 benefit-bg"></div>
+
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black opacity-50"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
@@ -64,7 +74,7 @@ export default function Benefits() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
-            Benefits of Buying Aged MC Authority with or without Amazon
+            Benefits of Buying Aged MC Authority
           </h2>
 
           <motion.div
@@ -76,7 +86,7 @@ export default function Benefits() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-gray-800 rounded-lg p-6 shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                className="cursor-pointer  bg-gray-900/70 backdrop-blur-sm rounded-lg p-6 shadow-lgo transition-all duration-300"
                 variants={item}
               >
                 <div className="flex items-start space-x-4">
@@ -87,7 +97,7 @@ export default function Benefits() {
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {benefit.title}
                     </h3>
-                    <p className="text-gray-300">{benefit.description}</p>
+                    <p className="text-gray-200">{benefit.description}</p>
                   </div>
                 </div>
               </motion.div>
