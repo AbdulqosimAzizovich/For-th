@@ -159,7 +159,7 @@ export default function SoldItems() {
       >
         <div className="bg-gray-900/70 text-white p-6 sm:p-8 rounded-2xl shadow-xl">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] to-blue-200">
-            Here are the partner compaines that we work with:
+            Here are the partner companies that we work with:
           </h2>
 
           {/* <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
