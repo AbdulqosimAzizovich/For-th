@@ -1,5 +1,5 @@
 // components/SoldItems.tsx
-import { Check } from "lucide-react";
+// import { Check } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
