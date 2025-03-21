@@ -29,7 +29,7 @@ export default function SoldItems() {
     { id: 6, name: "Company 6", logo: "/X9.png" },
     { id: 7, name: "Company 7", logo: "/Afsu.jpg" },
     { id: 8, name: "Company 8", logo: "/Karnab.jpg" },
-    { id: 9, name: "Company 9", logo: "/Ik.jpg" },
+    { id: 9, name: "Company 9", logo: "/twenty.jpg" },
     { id: 10, name: "Company 10", logo: "/Minessota.jpg" },
     { id: 11, name: "Company 11", logo: "/Wa.JPEG" },
     { id: 12, name: "Company 12", logo: "/X9.png" },
@@ -38,7 +38,7 @@ export default function SoldItems() {
     { id: 15, name: "Company 15", logo: "/Ik.jpg" },
     { id: 16, name: "Company 16", logo: "/Minessota.jpg" },
     { id: 17, name: "Company 17", logo: "/Wa.JPEG" },
-    { id: 18, name: "Company 18", logo: "/X9.png" },
+    { id: 18, name: "Company 18", logo: "/twenty.jpg" },
     { id: 19, name: "Company 19", logo: "/Greenland.jpg" },
     { id: 20, name: "Company 20", logo: "/Karnab.jpg" },
   ];
