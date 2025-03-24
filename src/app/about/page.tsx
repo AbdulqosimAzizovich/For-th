@@ -286,7 +286,9 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-lg mb-6 italic">"{testimonial.quote}"</p>
+              <p className="text-lg mb-6 italic">
+                &quot;{testimonial.quote}&quot;
+              </p>
               <div>
                 <p className="font-bold">{testimonial.author}</p>
                 <p className="text-blue-400">{testimonial.company}</p>
