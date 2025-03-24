@@ -92,7 +92,7 @@ const ResourcesPage = () => {
   ];
 
   return (
-    <div className="bg-[#0d1117] text-white min-h-screen">
+    <div className="bg-[#0d1117] text-white min-h-screen overflow-x-hidden">
       {/* Hero Section */}
       <div
         className="bg-cover bg-center h-[500px] flex items-center justify-center relative"
