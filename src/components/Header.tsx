@@ -84,10 +84,10 @@ export default function Header() {
                 Services
               </Link>
               <Link
-                href="/location"
+                href="/blog"
                 className="py-2 hover:text-blue-400 transition"
               >
-                Location
+                Blog
               </Link>
               <Link
                 href="/#footer"
