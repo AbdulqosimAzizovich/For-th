@@ -244,9 +244,7 @@ const ResourcesPage = () => {
               viewport={{ once: true }}
               className="bg-[#1a202c] p-6 rounded-lg shadow-lg"
             >
-              <p className="italic text-gray-300 mb-4">
-                &quot;{testimonial.quote}&quot;
-              </p>
+              <p className="italic text-gray-300 mb-4">{testimonial.quote}</p>
               <p className="font-semibold text-blue-500">
                 {testimonial.author}
               </p>
