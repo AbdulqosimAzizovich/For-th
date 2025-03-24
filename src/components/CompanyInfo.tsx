@@ -1,6 +1,8 @@
 // components/CompanyInfo.tsx
-import React from "react";
-import { ExternalLink, Instagram, Youtube, Send } from "lucide-react";
+"use client";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Instagram, Youtube, Send, X } from "lucide-react";
 
 interface CompanyData {
   id: number;
@@ -19,11 +21,55 @@ interface CompanyInfoProps {
 }
 
 export default function CompanyInfo({ type }: CompanyInfoProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCompany, setSelectedCompany] = useState<CompanyData | null>(
+    null
+  );
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleOpenModal = (company: CompanyData) => {
+    setSelectedCompany(company);
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "auto";
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+    // Reset form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+    });
+    handleCloseModal();
+  };
+
   // Sample data for companies
   const buyCompanies: CompanyData[] = [
     {
       id: 1,
-      name: "UIC Group Kompaniy",
+      name: "UIC Group Company",
       salary: "$500+",
       level: "Middle",
       workType: "Online",
@@ -33,7 +79,7 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
     },
     {
       id: 2,
-      name: "UIC Group Kompaniy",
+      name: "UIC Group Company",
       salary: "$500+",
       level: "Middle",
       workType: "Online",
@@ -48,7 +94,7 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
   const sellCompanies: CompanyData[] = [
     {
       id: 3,
-      name: "UIC Group Kompaniy",
+      name: "UIC Group Company",
       salary: "$500+",
       level: "Middle",
       workType: "Online",
@@ -58,7 +104,7 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
     },
     {
       id: 4,
-      name: "UIC Group Kompaniy",
+      name: "UIC Group Company",
       salary: "$500+",
       level: "Middle",
       workType: "Online",
@@ -78,8 +124,8 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800">
             {type === "buy"
-              ? "Companies Selling Digital Assets"
-              : "Companies Buying Digital Assets"}
+              ? "Companies Buying Digital Assets"
+              : "Companies Selling Digital Assets"}
           </h2>
         </div>
 
@@ -157,9 +203,15 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
                         <Youtube size={20} />
                       </span>
                     </div>
-                    <div className="ml-auto">
+                    <div className="ml-auto flex items-center">
+                      <button
+                        onClick={() => handleOpenModal(company)}
+                        className="bg-blue-600 text-white py-1 px-2 rounded cursor-pointer flex items-center justify-center mr-2 hover:bg-blue-700 transition-colors"
+                      >
+                        Contact
+                      </button>
                       <a
-                        href="tel:903458999"
+                        href={`tel:${company.phone.replace(/\s+/g, "")}`}
                         className="text-blue-600 font-medium"
                       >
                         {company.phone}
@@ -172,6 +224,163 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
           ))}
         </div>
       </div>
+
+      <AnimatePresence>
+        {isModalOpen && selectedCompany && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 flex items-center justify-center z-50"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 20,
+                duration: 0.3,
+              }}
+              className="bg-white rounded-lg shadow-lg w-full max-w-md mx-4 z-10 relative"
+            >
+              <div className="flex justify-between items-center p-4 border-b">
+                <h3 className="text-lg font-semibold text-gray-800">
+                  Contact {selectedCompany.name}
+                </h3>
+                <motion.button
+                  whileHover={{ rotate: 90 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={handleCloseModal}
+                  className="text-gray-500 hover:text-gray-700 cursor-pointer"
+                >
+                  <X size={20} />
+                </motion.button>
+              </div>
+
+              <form onSubmit={handleSubmit} className="p-6">
+                <div className="grid grid-cols-2 gap-4 mb-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <label
+                      htmlFor="firstName"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none text-gray-900"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <label
+                      htmlFor="lastName"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none text-gray-900"
+                    />
+                  </motion.div>
+                </div>
+
+                <div className="space-y-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                  >
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none text-gray-900"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none text-gray-900"
+                    />
+                  </motion.div>
+                </div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="mt-6"
+                >
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    type="submit"
+                    className="w-full bg-blue-600 cursor-pointer text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-offset-2"
+                  >
+                    Submit
+                  </motion.button>
+                </motion.div>
+              </form>
+            </motion.div>
+
+            {/* Blurred Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={handleCloseModal}
+              className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+            ></motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

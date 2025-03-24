@@ -3,12 +3,12 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative text-white py-20 md:py-36 min-h-[100svh] flex items-center">
+    <section className="relative text-white py-20 md:py-36 min-h-[140svh] flex items-center">
       {/* Background image using your CSS class */}
       <div className="absolute inset-0 hero-bg"></div>
 
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/40 to-transparent"></div>
 
       {/* Content section with z-index */}
       <div className="container mx-auto px-4 relative z-10">

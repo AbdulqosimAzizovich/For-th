@@ -39,19 +39,19 @@ body {
 }
 
 .hero-bg {
-  background-image: url("../../public/5.jpg");
+  background-image: url("/5.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .benefit-bg {
-  background-image: url("../../public/Hero1.jpg");
+  background-image: url("/Hero1.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .help-bg {
-  background-image: url("../../public/4.jpg");
+  background-image: url("/4.jpg");
   background-size: cover;
   background-position: center;
 }

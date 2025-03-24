@@ -30,28 +30,28 @@ const Services = () => {
       title: "MC Authority Sales",
       description:
         "Purchase verified aged MC authorities with established history. Get faster approval from brokers and shippers, and better insurance rates.",
-      link: "/buy-business",
+      link: "/buy-companies",
     },
     {
       icon: <BarChart3Icon size={48} className="text-blue-400" />,
       title: "Trucking Company Valuation",
       description:
         "Get a complete business valuation of your trucking company based on market data, asset value, and revenue history.",
-      link: "/sell-business",
+      link: "/sell-companies",
     },
     {
       icon: <TruckIcon size={48} className="text-blue-400" />,
       title: "Trucking Business Sales",
       description:
         "List your trucking company on our secure marketplace with valuation and transaction support. Work with our experienced team to sell at a higher rate.",
-      link: "/sell-business",
+      link: "/sell-companies",
     },
     {
       icon: <ShieldCheckIcon size={48} className="text-blue-400" />,
       title: "Transaction Security",
       description:
         "All transactions are secured with escrow protection, ensuring safe transfers for both buyers and sellers.",
-      link: "/services#security",
+      link: "/services",
     },
   ];
 
@@ -274,7 +274,7 @@ const Services = () => {
               <div className="mb-4">{service.icon}</div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="mb-4">{service.description}</p>
-              <a
+              {/* <a
                 href={service.link}
                 className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
               >
@@ -293,7 +293,7 @@ const Services = () => {
                     d="M9 5l7 7-7 7"
                   ></path>
                 </svg>
-              </a>
+              </a> */}
             </motion.div>
           ))}
         </div>
@@ -437,13 +437,13 @@ const Services = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contacts"
+              href="/#footer"
               className="bg-white text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300"
             >
               Contact Us
             </a>
             <a
-              href="/sell-business"
+              href="/sell-companies"
               className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-900 transition duration-300"
             >
               List Your Business
