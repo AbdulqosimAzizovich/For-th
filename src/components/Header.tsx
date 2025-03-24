@@ -27,6 +27,9 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
+          <Link href="/" className="hover:text-blue-400 transition">
+            Home
+          </Link>
           <Link href="/about" className="hover:text-blue-400 transition">
             About us
           </Link>
@@ -36,7 +39,7 @@ export default function Header() {
           <Link href="/blog" className="hover:text-blue-400 transition">
             Blog
           </Link>
-          <Link href="/contacts" className="hover:text-blue-400 transition">
+          <Link href="/#footer" className="hover:text-blue-400 transition">
             Contacts
           </Link>
           <div className="flex space-x-4">
@@ -65,6 +68,9 @@ export default function Header() {
         {isMenuOpen && (
           <div className="absolute top-16 left-0 w-full bg-black/90 shadow-lg md:hidden z-50">
             <div className="flex flex-col p-4">
+              <Link href="/" className="py-2 hover:text-blue-400 transition">
+                Home
+              </Link>
               <Link
                 href="/about"
                 className="py-2 hover:text-blue-400 transition"
@@ -84,7 +90,7 @@ export default function Header() {
                 Location
               </Link>
               <Link
-                href="/contacts"
+                href="/#footer"
                 className="py-2 hover:text-blue-400 transition"
               >
                 Contacts
