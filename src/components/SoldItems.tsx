@@ -162,22 +162,6 @@ export default function SoldItems() {
             Here are the partner companies that we work with:
           </h2>
 
-          {/* <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
-            <div className="bg-gray-700 bg-opacity-50 px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center backdrop-blur-sm transition-all duration-300 hover:bg-opacity-70">
-              <Check size={18} className="mr-2 sm:mr-3 text-green-400" />
-              <span className="text-sm sm:text-base font-medium">
-                20-30 MCs will be available
-              </span>
-            </div>
-            <div className="bg-gray-700 bg-opacity-50 px-4 sm:px-6 py-2 sm:py-3 rounded-full flex items-center backdrop-blur-sm transition-all duration-300 hover:bg-opacity-70">
-              <Check size={18} className="mr-2 sm:mr-3 text-green-400" />
-              <span className="text-sm sm:text-base font-medium">
-                will be rotating
-              </span>
-            </div>
-          </div> */}
-
-          {/* Company logos slider */}
           <div
             className="relative mt-8 sm:mt-10 px-8 sm:px-12"
             onMouseEnter={() => setIsPaused(true)}
