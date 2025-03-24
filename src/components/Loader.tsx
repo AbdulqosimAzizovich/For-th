@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-const PageLoader = () => {
+const PageLoaderContent = () => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(false);
@@ -90,6 +90,14 @@ const PageLoader = () => {
         </motion.div>
       )}
     </AnimatePresence>
+  );
+};
+
+const PageLoader = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PageLoaderContent />
+    </Suspense>
   );
 };
 

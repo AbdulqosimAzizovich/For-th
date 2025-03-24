@@ -6,6 +6,7 @@ import {
   useState,
   useEffect,
   ReactNode,
+  Suspense,
 } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import PageLoader from "./Loader";
@@ -16,11 +17,7 @@ const NavigationContext = createContext({
 
 export const useNavigation = () => useContext(NavigationContext);
 
-export function NavigationEventsProvider({
-  children,
-}: {
-  children: ReactNode;
-}) {
+function NavigationEvents() {
   const [isNavigating, setIsNavigating] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -42,7 +39,19 @@ export function NavigationEventsProvider({
   return (
     <NavigationContext.Provider value={{ isNavigating }}>
       <PageLoader />
-      {children}
     </NavigationContext.Provider>
+  );
+}
+
+export function NavigationEventsProvider({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  return (
+    <Suspense fallback={<PageLoader />}>
+      <NavigationEvents />
+      {children}
+    </Suspense>
   );
 }
