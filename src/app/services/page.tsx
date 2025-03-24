@@ -15,6 +15,7 @@ import {
   FileTextIcon,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
   // Animation variants
@@ -436,18 +437,18 @@ const Services = () => {
             business
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/#footer"
               className="bg-white text-blue-900 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300"
             >
               Contact Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="/sell-companies"
               className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-900 transition duration-300"
             >
               List Your Business
-            </a>
+            </Link>
           </div>
         </div>
       </motion.section>
