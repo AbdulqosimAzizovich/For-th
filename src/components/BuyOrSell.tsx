@@ -1,5 +1,5 @@
-import React, { JSX, useState } from "react";
-import { ShoppingCart, DollarSign, ChevronRight, Info } from "lucide-react";
+import { JSX, useState } from "react";
+import { ShoppingCart, DollarSign } from "lucide-react";
 import Link from "next/link";
 
 const TruckingMarketplace = () => {
