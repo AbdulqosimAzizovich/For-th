@@ -39,7 +39,8 @@ body {
 }
 
 .hero-bg {
-  background-image: url("/5.jpg");
+  background-image: url("/das4.avif");
+  /* background-image: url("/5.jpg"); */
   background-size: cover;
   background-position: center;
 }
@@ -51,7 +52,7 @@ body {
 }
 
 .help-bg {
-  background-image: url("/4.jpg");
+  background-image: url("/Contract3.jpg");
   background-size: cover;
   background-position: center;
 }
