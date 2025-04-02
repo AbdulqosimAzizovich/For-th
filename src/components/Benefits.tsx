@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { title } from "process";
+import { desc } from "framer-motion/m";
 
 export default function Benefits() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,32 +32,52 @@ export default function Benefits() {
     {
       title: "Established History",
       description:
-        "An aged MC authority has an established record, even if the company didn't operate actively. This history can be appealing to brokers and shippers who want to minimize risk.",
+        "An aged MC (Motor Carrier) authority provides your business with an established record, which can be an asset when working with brokers and shippers. Even if the company associated with the authority did not actively operate, its history still adds credibility to your business. Brokers and shippers often prefer working with carriers that have an older authority because it minimizes their perceived risk. A well-aged MC number signals stability and longevity, making it easier to build trust and form business relationships within the industry.",
     },
     {
       title: "Faster Operations",
       description:
-        "Since the authority is already established, you can start your business operations faster without waiting for new authority approval or the long setup process.",
+        "When you purchase an aged MC authority, you can bypass the lengthy approval process required for a new authority. The Federal Motor Carrier Safety Administration (FMCSA) requires new MC authorities to go through a waiting period, which includes the 21-day vetting process and the BOC-3 filing, in addition to insurance verification. With an aged authority, these steps are already completed, allowing you to hit the ground running and start hauling loads immediately. This is especially beneficial for owner-operators or carriers looking to get into the industry without delays.",
     },
     {
       title: "Better Insurance Rates",
       description:
-        "Insurance providers may offer more competitive rates for aged MC authorities since they come with a track record, even if it's minimal.",
+        "Insurance premiums are often lower for aged MC authorities because they come with an established track record. New authorities typically face higher insurance costs because insurers see them as higher risk. However, an older MC authority can demonstrate a longer history of compliance, even if it hasn't been used extensively. Some insurance companies may also waive additional fees or provide discounts to carriers with an aged authority, leading to significant cost savings in the long run.",
     },
     {
       title: "Easier Access to Loads",
       description:
-        "Many brokers prefer to work with carriers that have been in the system for a while because they view them as more reliable and trustworthy. Aged MC authority can help you secure contracts or load offers quicker.",
+        "Many freight brokers and direct shippers prefer working with trucking companies that have been in the system for a while. This is because an aged MC authority is perceived as more reliable and trustworthy than a newly established one. A well-established authority increases your chances of securing high-paying loads, as brokers often have policies requiring carriers to have an MC number active for at least six months to a year before working with them. By purchasing an aged MC authority, you can overcome this barrier and gain access to better freight opportunities faster.",
     },
     {
       title: "Lower Risk to Brokers/Shippers",
       description:
-        "Since the authority has been around for a while, it signals that the company may have been compliant with FMCSA regulations for longer, reducing risk for others in the supply chain.",
+        "Brokers and shippers assess risk before awarding contracts to carriers. Aged MC authorities indicate that a company has been compliant with FMCSA regulations for a longer period, reducing the perceived risk. Many brokers have strict guidelines about how long a trucking company must have been in operation before they can work together. An aged MC authority allows you to meet these requirements and establish business relationships with major brokers and shippers more quickly than starting from scratch.",
     },
     {
       title: "Easier to work with Amazon with Aged MC Authoriity. ",
       description:
-        "Most people prefer to work with Amazon relay, so with Aged MC authority you will have more chance to get approved by Amazon team. Or you can buy MC authority from us that has already been working with Amazon.",
+        "When you buy an aged MC authority, you increase your chances of being pre-approved or easily approved by major brokers such as Schneider, J.B. Hunt, and Amazon Relay. Many brokers require carriers to have at least 90 days to one year of operating authority before onboarding them. With an aged MC authority, you can bypass these waiting periods and start working with major brokers immediately.",
+    },
+    {
+      title: "",
+      description:
+        "Many truckers and fleet owners aim to work with Amazon Relay, as it provides consistent freight opportunities with competitive rates. Having an aged MC authority increases your chances of getting approved by Amazon Relay and other major logistics companies. If you purchase an MC authority from us, it may already be set up with these brokers, allowing you to start hauling loads without delay.",
+    },
+    {
+      title: "Hire the Best Drivers",
+      description:
+        "Experienced and reliable truck drivers often research the companies they consider working for. When a company has an aged MC authority, it signals to drivers that the business is established and reputable. This helps attract top-tier talent, including company drivers, lease operators, and owner-operators.Drivers prefer working for companies that have been in the industry for a while, as they offer more stability and better opportunities. With an aged MC authority, you will have a competitive edge in recruiting high-quality drivers who are essential for maintaining safe and efficient operations. In addition, thorough vetting and training can further enhance your company’s reputation and ensure compliance with industry standards.",
+    },
+    {
+      title: "Low Factoring Percentage with Aged MC Authority",
+      description:
+        "Factoring companies help trucking businesses manage cash flow by purchasing their unpaid invoices at a discount, providing immediate funds instead of waiting for payment from brokers or shippers. However, newer MC authorities often face higher factoring rates because they are considered higher risk. With an aged MC authority, you are more likely to qualify for lower factoring fees since your authority has an established history. Lower factoring percentages mean you retain more of your earnings, improving your overall profitability and financial stability.",
+    },
+    {
+      title: "Easier to Get Truck Financing from Dealerships",
+      description:
+        "Truck dealerships and financial institutions often have strict requirements when approving financing for new trucks. Aged MC authorities provide a sense of stability and reliability, making it easier to secure loans or lease agreements. Dealerships and lenders typically prefer working with businesses that have an operational history, as they see them as lower risk compared to new authorities. By purchasing an aged MC authority, you increase your chances of qualifying for financing with better terms, lower interest rates, and fewer restrictions, allowing you to expand your fleet without major financial hurdles.",
     },
   ];
 
