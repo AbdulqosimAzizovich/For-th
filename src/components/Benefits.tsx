@@ -2,8 +2,8 @@
 import { useState, useEffect } from "react";
 import { CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
-import { title } from "process";
-import { desc } from "framer-motion/m";
+// import { title } from "process";
+// import { desc } from "framer-motion/m";
 
 export default function Benefits() {
   const [isVisible, setIsVisible] = useState(false);
