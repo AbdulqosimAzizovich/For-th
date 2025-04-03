@@ -41,9 +41,9 @@ const TruckingMarketplace = () => {
     ],
   };
 
-  interface Benefit {
-    text: string;
-  }
+  // interface Benefit {
+  //   text: string;
+  // }
 
   // Split each benefit text into preview and detailed parts
   const processedBenefits = buyDetails.benefits.map((benefit) => {
