@@ -1,16 +1,26 @@
 // components/Benefits.tsx
+"use client";
 import { useState, useEffect } from "react";
-import { CheckCircle } from "lucide-react";
-import { motion } from "framer-motion";
-// import { title } from "process";
-// import { desc } from "framer-motion/m";
+import { CheckCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Benefits() {
   const [isVisible, setIsVisible] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<number[]>([]);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const toggleItem = (index: number) => {
+    setExpandedItems((prev) =>
+      prev.includes(index)
+        ? prev.filter((item) => item !== index)
+        : [...prev, index]
+    );
+  };
+
+  const isExpanded = (index: number) => expandedItems.includes(index);
 
   const container = {
     hidden: { opacity: 0 },
@@ -26,6 +36,11 @@ export default function Benefits() {
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
+  };
+
+  const contentAnimation = {
+    hidden: { height: 0, opacity: 0 },
+    show: { height: "auto", opacity: 1 },
   };
 
   const benefits = [
@@ -55,19 +70,19 @@ export default function Benefits() {
         "Brokers and shippers assess risk before awarding contracts to carriers. Aged MC authorities indicate that a company has been compliant with FMCSA regulations for a longer period, reducing the perceived risk. Many brokers have strict guidelines about how long a trucking company must have been in operation before they can work together. An aged MC authority allows you to meet these requirements and establish business relationships with major brokers and shippers more quickly than starting from scratch.",
     },
     {
-      title: "Easier to work with Amazon with Aged MC Authoriity. ",
+      title: "Easier to work with Amazon with Aged MC Authoriity",
       description:
         "When you buy an aged MC authority, you increase your chances of being pre-approved or easily approved by major brokers such as Schneider, J.B. Hunt, and Amazon Relay. Many brokers require carriers to have at least 90 days to one year of operating authority before onboarding them. With an aged MC authority, you can bypass these waiting periods and start working with major brokers immediately.",
     },
     {
-      title: "",
+      title: "Work with Amazon Relay",
       description:
         "Many truckers and fleet owners aim to work with Amazon Relay, as it provides consistent freight opportunities with competitive rates. Having an aged MC authority increases your chances of getting approved by Amazon Relay and other major logistics companies. If you purchase an MC authority from us, it may already be set up with these brokers, allowing you to start hauling loads without delay.",
     },
     {
       title: "Hire the Best Drivers",
       description:
-        "Experienced and reliable truck drivers often research the companies they consider working for. When a company has an aged MC authority, it signals to drivers that the business is established and reputable. This helps attract top-tier talent, including company drivers, lease operators, and owner-operators.Drivers prefer working for companies that have been in the industry for a while, as they offer more stability and better opportunities. With an aged MC authority, you will have a competitive edge in recruiting high-quality drivers who are essential for maintaining safe and efficient operations. In addition, thorough vetting and training can further enhance your company’s reputation and ensure compliance with industry standards.",
+        "Experienced and reliable truck drivers often research the companies they consider working for. When a company has an aged MC authority, it signals to drivers that the business is established and reputable. This helps attract top-tier talent, including company drivers, lease operators, and owner-operators.Drivers prefer working for companies that have been in the industry for a while, as they offer more stability and better opportunities. With an aged MC authority, you will have a competitive edge in recruiting high-quality drivers who are essential for maintaining safe and efficient operations. In addition, thorough vetting and training can further enhance your company's reputation and ensure compliance with industry standards.",
     },
     {
       title: "Low Factoring Percentage with Aged MC Authority",
@@ -108,18 +123,61 @@ export default function Benefits() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="cursor-pointer  bg-gray-900/70 backdrop-blur-sm rounded-lg p-6 shadow-lgo transition-all duration-300"
+                className="cursor-pointer bg-gray-900/70 backdrop-blur-sm rounded-lg p-6 shadow-lg transition-all duration-300 hover:bg-gray-800/70"
                 variants={item}
+                onClick={() => toggleItem(index)}
               >
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1">
+                <div className="flex items-start">
+                  <div className="mt-1 mr-4">
                     <CheckCircle className="text-blue-500" size={24} />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-200">{benefit.description}</p>
+                  <div className="flex-1">
+                    <div className="flex justify-between items-center">
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {benefit.title}
+                      </h3>
+                      <motion.div
+                        animate={{ rotate: isExpanded(index) ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        {isExpanded(index) ? (
+                          <ChevronUp className="text-blue-500" size={20} />
+                        ) : (
+                          <ChevronDown className="text-blue-500" size={20} />
+                        )}
+                      </motion.div>
+                    </div>
+
+                    {/* Preview text (always visible) */}
+                    <p className="text-gray-300">
+                      {benefit.description.substring(0, 100)}
+                      {benefit.description.length > 100 && "..."}
+                    </p>
+
+                    {/* Expandable content */}
+                    <AnimatePresence>
+                      {isExpanded(index) && (
+                        <motion.div
+                          initial="hidden"
+                          animate="show"
+                          exit="hidden"
+                          variants={contentAnimation}
+                          transition={{ duration: 0.3 }}
+                          className="mt-2 overflow-hidden"
+                        >
+                          <p className="text-gray-200">{benefit.description}</p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
+                    {/* Read more/less button */}
+                    <motion.button
+                      className="mt-3 text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {isExpanded(index) ? "Show less" : "Read more"}
+                    </motion.button>
                   </div>
                 </div>
               </motion.div>

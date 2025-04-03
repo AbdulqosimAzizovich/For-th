@@ -1,5 +1,5 @@
-import { JSX } from "react";
-import { DollarSign } from "lucide-react";
+import { JSX, useState } from "react";
+import { DollarSign, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 
 const TruckingMarketplace = () => {
@@ -45,15 +45,89 @@ const TruckingMarketplace = () => {
     text: string;
   }
 
-  const renderBenefitsList = (benefits: Benefit[]): JSX.Element => (
+  // Split each benefit text into preview and detailed parts
+  const processedBenefits = buyDetails.benefits.map((benefit) => {
+    // Get first sentence for preview
+    const firstDotIndex = benefit.text.indexOf(".");
+    if (firstDotIndex > 0) {
+      return {
+        previewText: benefit.text.substring(0, firstDotIndex + 1),
+        fullText: benefit.text,
+      };
+    }
+    // Fallback if no period found
+    return {
+      previewText: benefit.text.substring(0, 100) + "...",
+      fullText: benefit.text,
+    };
+  });
+
+  // State to track which benefits are expanded
+  const [expandedBenefits, setExpandedBenefits] = useState<
+    Record<number, boolean>
+  >({});
+
+  // Toggle function for each benefit
+  const toggleBenefit = (index: number) => {
+    setExpandedBenefits((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
+  const renderBenefitsList = (): JSX.Element => (
     <ul className="space-y-3 md:space-y-0 mb-4 md:mb-0 text-sm md:text-base flex-1 grid md:grid-cols-2 gap-4">
-      {benefits.map((benefit, index) => (
+      {processedBenefits.map((benefit, index) => (
         <li
           key={index}
-          className="flex items-start min-h-[60px] bg-gray-700/50 p-4 rounded-lg"
+          className="flex flex-col items-start min-h-[60px] bg-gray-700/50 p-4 rounded-lg overflow-hidden transition-all duration-300 ease-in-out"
+          style={{
+            maxHeight: expandedBenefits[index] ? "1000px" : "150px",
+            transition: "max-height 0.5s ease-in-out",
+          }}
         >
-          <span className="mr-2 text-blue-400 font-bold">•</span>
-          <span>{benefit.text}</span>
+          <div className="flex items-start w-full">
+            <span className="mr-2 text-blue-400 font-bold">•</span>
+            <div className="flex-1">
+              <div
+                className={`relative transition-all duration-300 ${
+                  expandedBenefits[index] ? "opacity-100" : ""
+                }`}
+              >
+                <p className="transition-all duration-300">
+                  {expandedBenefits[index]
+                    ? benefit.fullText
+                    : benefit.previewText}
+                </p>
+
+                {/* Shining border effect when expanded */}
+                {expandedBenefits[index] && (
+                  <div className="absolute -left-4 top-0 w-1 h-full bg-blue-400 opacity-50 animate-pulse"></div>
+                )}
+              </div>
+
+              <button
+                onClick={() => toggleBenefit(index)}
+                className={`mt-4 text-blue-400 cursor-pointer hover:text-blue-300 flex items-center text-sm font-medium focus:outline-none transition-all duration-300 ${
+                  expandedBenefits[index] ? "opacity-100" : "opacity-80"
+                } hover:opacity-100`}
+              >
+                {expandedBenefits[index] ? (
+                  <>
+                    <span className="flex items-center transition-transform duration-300 transform hover:-translate-y-1">
+                      Show Less <ChevronUp size={16} className="ml-1" />
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="flex items-center transition-transform duration-300 transform hover:translate-y-1">
+                      Read More <ChevronDown size={16} className="ml-1" />
+                    </span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
         </li>
       ))}
     </ul>
@@ -81,7 +155,7 @@ const TruckingMarketplace = () => {
                 {buyDetails.subheadline}
               </p>
 
-              {renderBenefitsList(buyDetails.benefits)}
+              {renderBenefitsList()}
 
               <div className="flex flex-col items-center mt-8">
                 <Link
