@@ -1,10 +1,25 @@
 // components/HelpSection.tsx
 import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function HelpSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Background images for slider
+  const backgroundImages = ["/help1.jpg", "/help2.jpg", "/help3.jpg"];
+
+  // Auto-rotate slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % backgroundImages.length);
+    }, 10000); // Change slide every 10 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const services = [
-    "To get fuel cards that offer better discounts compared to others, helping you save more on fuel costs. Additionally,  fuel cards come with flexible payment options and wide acceptance, making them a convenient choice for your business.",
-    "To  get new insurance at a more affordable rate, ensuring you receive the coverage you need without breaking your budget. Plus,  working  with the trusted providers to offer you customized plans that fit your specific needs and risk profile.",
+    "To get fuel cards that offer better discounts compared to others, helping you save more on fuel costs. Additionally, fuel cards come with flexible payment options and wide acceptance, making them a convenient choice for your business.",
+    "To get new insurance at a more affordable rate, ensuring you receive the coverage you need without breaking your budget. Plus, working with the trusted providers to offer you customized plans that fit your specific needs and risk profile.",
     "To find reliable ELD partners that offer services at an affordable rate, ensuring compliance and efficiency for your fleet. Moreover, our partners provide excellent customer support to ensure smooth installation and ongoing assistance whenever needed.",
     "To find verified factoring companies that charge lower percentages, helping you keep more of your earnings. Additionally, our trusted partners offer flexible terms and quick funding, so you can maintain cash flow without delays.",
     "To get experienced truck drivers for your company, including company drivers, lease operators, and owner-operators. Our drivers are thoroughly vetted and trained to ensure they meet the highest industry standards, helping you maintain safe and efficient operations.",
@@ -14,14 +29,22 @@ export default function HelpSection() {
   ];
 
   return (
-    <section className=" py-20 bg-black relative">
-      {/* Background effect */}
-      {/* <div className="absolute inset-0 bg-gradient-to-b from-black to-gray-900 opacity-80"></div> */}
-
-      <div className="absolute inset-0 help-bg"></div>
+    <section className="py-20 bg-black relative">
+      {/* Background slider - each slide has fade transition */}
+      {backgroundImages.map((image, index) => (
+        <div
+          key={index}
+          className="absolute inset-0 transition-opacity duration-1000 ease-in-out bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${image})`,
+            opacity: currentSlide === index ? 1 : 0,
+            zIndex: 1,
+          }}
+        ></div>
+      ))}
 
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
+      <div className="absolute inset-0 bg-black opacity-40 z-[2]"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
@@ -50,6 +73,20 @@ export default function HelpSection() {
               ))}
             </div>
           </div>
+
+          {/* Optional: Slider indicator dots */}
+          {/* <div className="flex justify-center mt-6 space-x-2">
+            {backgroundImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? "bg-white scale-125" : "bg-white/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              ></button>
+            ))}
+          </div> */}
         </div>
       </div>
     </section>
