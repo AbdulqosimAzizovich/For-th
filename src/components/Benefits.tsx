@@ -148,11 +148,13 @@ export default function Benefits() {
                       </motion.div>
                     </div>
 
-                    {/* Preview text (always visible) */}
-                    <p className="text-gray-300">
-                      {benefit.description.substring(0, 100)}
-                      {benefit.description.length > 100 && "..."}
-                    </p>
+                    {/* Preview text (visible only when NOT expanded) */}
+                    {!isExpanded(index) && (
+                      <p className="text-gray-300">
+                        {benefit.description.substring(0, 100)}
+                        {benefit.description.length > 100 && "..."}
+                      </p>
+                    )}
 
                     {/* Expandable content */}
                     <AnimatePresence>
