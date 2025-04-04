@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import Hero from "../components/Hero";
 import BuyOrSell from "../components/BuyOrSell";
 import SoldItems from "../components/SoldItems";
-import PartnersSection from "../components/HelpSection";
+import PartnersSection from "../components/TruckingServicesHero";
 import Benefits from "../components/Benefits";
 
 export default function Home() {

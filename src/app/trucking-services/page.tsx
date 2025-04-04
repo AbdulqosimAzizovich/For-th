@@ -1,200 +1,310 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { ArrowRight } from "lucide-react";
-import das4 from "../../../public/das4.jpg";
+import React, { useEffect } from "react";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function TruckingServicesPage() {
-  const [currentSection, setCurrentSection] = useState(0);
-  const [animateServices, setAnimateServices] = useState(false);
+interface ServiceCardProps {
+  number: string;
+  category: string;
+  title: string;
+  description: string;
+  description1: string;
+  imageSrc: string;
+}
 
-  useEffect(() => {
-    // Trigger animation for services when component mounts
-    setAnimateServices(true);
-  }, []);
+const serviceData: ServiceCardProps[] = [
+  {
+    number: "01",
+    category: "Getting started",
+    title: "Fuel Cards with Maximum Discounts for Trucking Businesses",
+    description:
+      "We help you get fuel cards that offer bigger discounts than most, helping you save more money. These cards also have easy payment options and are accepted in many places, making them a great choice for your business. By using these fuel cards, you can better manage your fuel expenses, track your spending, and reduce overall operational costs. Many of our partnered fuel card providers also offer cashback rewards and loyalty programs, giving you additional savings over time. With nationwide coverage, you don’t have to worry about finding a station that accepts your card, ensuring convenience wherever your route takes you.",
+    description1:
+      "For example, some of our fuel card partners provide discounts of up to $0.50 per gallon at major truck stops like Pilot, Flying J, and Love’s. These savings add up significantly over time, especially for owner-operators and small fleets. Additionally, many of these cards allow you to set spending limits for drivers, ensuring better financial control. Some fuel cards even offer expense tracking features, which help streamline bookkeeping and tax reporting. By leveraging these benefits, trucking businesses can cut costs while improving financial efficiency.",
+    imageSrc: "/Contract.jpg",
+  },
+  {
+    number: "02",
+    category: "Affordable and Reliable Insurance",
+    title: "Cost-Effective Insurance Solutions for Trucking Companies",
+    description:
+      "We help you find insurance at a lower cost while still getting the protection you need. We work with trusted insurance companies that offer plans designed for your specific needs, so you don’t overpay. Our team understands the unique risks associated with the trucking industry and ensures you receive coverage that protects your business, vehicles, and drivers. We help you compare multiple insurance options, making sure you get the best value for your money. Additionally, we connect you with providers who offer flexible payment plans, making it easier to manage your expenses.",
+    description1:
+      "For instance, some of our insurance partners offer policies that bundle cargo insurance, liability coverage, and physical damage protection, allowing you to save more compared to purchasing separate plans. We also help businesses find insurance plans with lower deductibles or accident forgiveness programs, reducing financial strain in case of an incident. If you operate in high-risk areas or transport hazardous materials, we ensure you get specialized coverage that meets federal and state regulations. Furthermore, we work with insurers who provide 24/7 claims support, ensuring fast resolution in case of accidents or damages.",
+    imageSrc: "/Contract2.jpg",
+  },
+  {
+    number: "03",
+    category: "Easy and Affordable ELD Solutions",
+    title: "Easy and Affordable ELD Solutions",
+    description:
+      "Following the Electronic Logging Device (ELD) rules is important for your business. We connect you with trusted ELD providers that offer low-cost solutions with great customer support. They help with setup and provide ongoing assistance to keep everything running smoothly. These ELD solutions ensure compliance with federal regulations, avoiding costly fines and penalties. Our partners offer user-friendly systems that are easy to install and operate, reducing downtime and training time for your drivers. Additionally, the ELDs provide real-time tracking and reporting features, helping you monitor fleet performance and improve efficiency.",
+    description1:
+      "For instance, some of our insurance partners offer policies that bundle cargo insurance, liability coverage, and physical damage protection, allowing you to save more compared to purchasing separate plans. We also help businesses find insurance plans with lower deductibles or accident forgiveness programs, reducing financial strain in case of an incident. If you operate in high-risk areas or transport hazardous materials, we ensure you get specialized coverage that meets federal and state regulations. Furthermore, we work with insurers who provide 24/7 claims support, ensuring fast resolution in case of accidents or damages.",
+    imageSrc: "/Contract3.jpg",
+  },
+  {
+    number: "04",
+    category: "Factoring Companies with Low Fees",
+    title: "Factoring Companies with Low Fees",
+    description:
+      "Keeping cash flow steady is important. We help you find factoring companies that take a smaller percentage from your earnings, so you keep more of your money. These companies also offer flexible terms and fast payments to help your business stay on track. Instead of waiting weeks for payments, factoring services allow you to access funds within 24 to 48 hours, improving your financial stability. Our partners have transparent pricing, with no hidden fees, so you always know what to expect. Additionally, factoring can help cover expenses like fuel, maintenance, and payroll, ensuring smooth operations without financial stress.",
+    description1:
+      "For instance, we work with factoring companies that offer rates as low as 1-3%, allowing you to retain more of your hard-earned revenue. Some factoring services also provide non-recourse options, meaning they take on the risk if a broker or shipper fails to pay. This added security ensures that your business remains financially stable even if a client defaults. Many factoring companies also offer fuel card programs, further helping with day-to-day operating costs. With these benefits, businesses can maintain cash flow and avoid the stress of delayed payments.",
+    imageSrc: "/Contract.jpg",
+  },
+  {
+    number: "05",
+    category: "Team Building",
+    title: "Factoring Companies with Low Fees",
+    description:
+      "Keeping cash flow steady is important. We help you find factoring companies that take a smaller percentage from your earnings, so you keep more of your money. These companies also offer flexible terms and fast payments to help your business stay on track. Instead of waiting weeks for payments, factoring services allow you to access funds within 24 to 48 hours, improving your financial stability. Our partners have transparent pricing, with no hidden fees, so you always know what to expect. Additionally, factoring can help cover expenses like fuel, maintenance, and payroll, ensuring smooth operations without financial stress.",
+    description1:
+      "For example, our ELD partners provide solutions that integrate with fleet management software, allowing businesses to track fuel usage, route efficiency, and driver behavior. Many of these ELDs offer mobile apps that drivers can use to log their hours effortlessly, reducing paperwork and ensuring accuracy. Some providers also offer automated alerts for HOS (Hours of Service) violations, helping drivers stay compliant. Additionally, our partners offer training sessions and 24/7 technical support, making the transition to ELD compliance seamless for businesses of all sizes.",
 
-  const sections = [
-    {
-      number: "01",
-      category: "Getting started",
-      title: "Finding The Right Trucking Services",
-      description:
-        "Determining which trucking services are essential for your business can be an important tool when planning for growth and efficiency. This guide will help you identify which services can benefit your operation according to different business sizes and operational needs. What type of support does your trucking business need – basic, moderate, comprehensive, or specialized services?",
-    },
-    {
-      number: "02",
-      category: "Service Essentials",
-      title: "Selecting The Right Partners!",
-      description:
-        "The nice thing about optimizing your trucking business is that you don't need to pay premium rates for essential services. Let's start with the basics. A typical mistake trucking business owners make is working with the first service provider they find, which can lead to higher costs and subpar service quality.",
-    },
-    {
-      number: "03",
-      category: "Where you spend is the key",
-      title: "Understanding Your Budget & Timing",
-      description:
-        "To start, evaluate your current expenses and operational needs. If you're experiencing cash flow issues, consider factoring services. Review service contracts carefully, and have a good idea of what to expect from each provider. I recommend knowing what key performance indicators to track as you implement new services.",
-    },
-  ];
+    imageSrc: "/Contract2.jpg",
+  },
+  {
+    number: "06",
+    category: "Experienced and Reliable Truck Drivers",
+    title: "Experienced and Reliable Truck Drivers",
+    description:
+      "Whether you need company drivers, lease operators, or owner-operators, we help you find experienced and well-trained drivers who meet industry standards. This helps your business run safely and efficiently. Our network includes skilled drivers who have undergone thorough background checks, ensuring they meet safety and compliance requirements. We also connect you with drivers who have experience in specific freight types, whether it’s refrigerated goods, dry vans, or hazardous materials. Additionally, by hiring the right drivers, you can reduce turnover rates and build a more reliable and productive team.",
+    description1:
+      "For example, our hiring partners conduct extensive screening, including driving record checks, drug tests, and previous employment verification, to ensure only the most qualified drivers join your fleet. We also match businesses with drivers who hold specialized endorsements, such as Hazmat or Tanker certifications, for companies dealing with sensitive cargo. Some of our partners offer driver retention programs, helping businesses reduce turnover by improving job satisfaction. By working with us, you gain access to a pool of skilled drivers who are committed to safety and professionalism.",
+    imageSrc: "/Contract3.jpg",
+  },
+  {
+    number: "07",
+    category: "Dispatch Services to Increase Your Earnings",
+    title: "Dispatch Services to Increase Your Earnings",
+    description:
+      "We work with expert dispatchers who can book higher-paying loads and plan better routes. This means more money for you, fewer empty miles, and on-time deliveries. Our dispatch partners have strong relationships with shippers and brokers, giving you access to better freight opportunities. They also use advanced route optimization tools to reduce fuel costs and minimize downtime. Additionally, having a dedicated dispatcher allows you to focus on driving while they handle negotiations, paperwork, and scheduling to keep your business running smoothly.",
+    description1:
+      "For example, our dispatchers have access to premium load boards and industry connections that help secure more profitable routes. They negotiate on your behalf to get better rates per mile, ensuring your business remains competitive. Some dispatch services also provide load planning strategies to minimize deadhead miles, saving fuel and maximizing profits. With 24/7 support, dispatchers can quickly resolve any issues that arise, keeping operations running efficiently.",
 
-  const services = [
-    {
-      title: "Fuel Cards with Maximum Discounts for Trucking Businesses",
-      description:
-        "Get access to fuel cards offering discounts of up to $0.50 per gallon at major truck stops like Pilot, Flying J, and Love's. Manage your fuel expenses effectively with nationwide coverage, expense tracking, and cashback rewards for additional savings.",
-    },
-    {
-      title: "Cost-Effective Insurance Solutions for Trucking Companies",
-      description:
-        "Find customized insurance plans designed to protect your vehicles, drivers, and cargo. Compare multiple insurance options with flexible payment plans and benefit from bundled policies for comprehensive coverage at a lower cost.",
-    },
-    {
-      title: "User-Friendly and Budget-Friendly ELD Solutions",
-      description:
-        "Ensure federal compliance with low-cost ELD systems featuring real-time tracking, automated alerts, and seamless integration with fleet management software. Benefit from 24/7 support and effortless setup for smooth operations.",
-    },
-    {
-      title: "Factoring Services with Low Fees and Fast Payments",
-      description:
-        "Improve your cash flow by partnering with factoring companies offering rates as low as 1-3%. Access funds within 24-48 hours with transparent pricing and non-recourse options for added security.",
-    },
-    {
-      title: "Hire Skilled and Qualified Truck Drivers",
-      description:
-        "Connect with experienced drivers who meet industry standards through thorough screening processes. Reduce turnover rates and build a reliable team with drivers specialized in refrigerated goods, hazardous materials, and more.",
-    },
-    {
-      title: "Professional Dispatch Services for Better Profitability",
-      description:
-        "Maximize your revenue with expert dispatchers who book higher-paying loads and optimize routes. Reduce empty miles, enhance efficiency, and ensure on-time deliveries with advanced planning tools and 24/7 support.",
-    },
-    {
-      title: "Specialized Accounting Services for Trucking Businesses",
-      description:
-        "Stay financially organized with accountants who understand the trucking industry. From tax preparation and expense tracking to IFTA reporting, get tailored services to enhance profitability and compliance.",
-    },
-    {
-      title: "Comprehensive Safety and Compliance Services",
-      description:
-        "Ensure your fleet meets DOT and FMCSA regulations with expert safety consultants. From driver training and vehicle inspections to compliance reviews, enhance your company's reputation and minimize risks.",
-    },
-  ];
+    imageSrc: "/Contract.jpg",
+  },
+  {
+    number: "09",
+    category: "Trucking-Focused Accounting Services",
+    title: "Trucking-Focused Accounting Services",
+    description:
+      "Managing finances can be tough in the trucking business. We connect you with accountants who specialize in trucking. They help you keep track of your finances, follow all rules, and stay organized so you can focus on running your business. Our accounting partners offer services such as tax preparation, expense tracking, and financial planning tailored specifically for trucking companies. They help ensure compliance with IRS regulations and prevent costly mistakes. Additionally, by having a clear financial strategy, you can maximize profits, reduce tax liabilities, and plan for future growth.",
+    description1:
+      "For example, our accounting experts can help you take advantage of tax deductions specific to the trucking industry, such as per diem allowances, fuel expenses, and depreciation. They also assist with IFTA reporting, ensuring compliance with fuel tax regulations across state lines. Many of our partners provide bookkeeping software integration, making it easy to track profits and expenses in real-time. By working with professionals who understand trucking finances, you can avoid penalties and keep your business financially secure.",
 
+    imageSrc: "/Contract2.jpg",
+  },
+  {
+    number: "08",
+    category: "Safety and Compliance Services",
+    title: "Safety and Compliance Services",
+    description:
+      "Staying safe and following trucking laws is very important. We help you find safety experts who offer driver training, vehicle inspections, and compliance services. This helps lower risks and keeps your fleet running safely. Our safety partners provide ongoing support, including audits and compliance reviews, to ensure you meet DOT and FMCSA regulations. They also offer customized safety programs to reduce accidents and improve driver awareness. By prioritizing safety, you not only avoid penalties but also improve your company’s reputation, making it easier to secure more contracts and long-term success.",
+    description1:
+      "For instance, our safety consultants conduct mock DOT audits, helping businesses prepare for official inspections and avoid costly violations. They also provide ongoing driver education, ensuring that employees stay up to date on new industry regulations. Some partners offer telematics solutions that monitor driver behavior, helping businesses identify areas for improvement. Investing in safety not only protects drivers but also enhances overall efficiency and profitability.",
+    imageSrc: "/Contract3.jpg",
+  },
+];
+
+const ServiceCard: React.FC<ServiceCardProps> = ({
+  number,
+  category,
+  title,
+  description,
+  description1,
+  imageSrc,
+}) => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      {/* Header/Hero Section */}
-      <div className="container mx-auto px-4 md:px-8 pt-16 pb-12 transition-all duration-500 opacity-100">
-        <h1 className="text-5xl font-bold mb-6 transition-all duration-500">
-          Trucking Services
-        </h1>
-        <p className="text-gray-300 text-xl max-w-3xl transition-all duration-500">
-          Comprehensive solutions to help your trucking business operate more
-          efficiently and profitably. Explore our range of specialized services
-          designed specifically for the trucking industry.
-        </p>
-      </div>
-
-      {/* Getting Started Guide Section */}
-      <div className="container mx-auto px-4 md:px-8 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Left Column - Navigation */}
-          <div className="lg:w-1/3 space-y-10">
-            {sections.map((section, index) => (
-              <div
-                key={index}
-                className={`cursor-pointer transition-all duration-300 ${
-                  currentSection === index
-                    ? "opacity-100"
-                    : "opacity-50 hover:opacity-80"
-                }`}
-                onClick={() => setCurrentSection(index)}
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="text-5xl text-gray-700 font-bold">
-                    {section.number}
-                  </div>
-                  <div className="h-px w-16 bg-yellow-500"></div>
-                  <div className="text-yellow-500">{section.category}</div>
-                </div>
-                <h3 className="text-2xl font-bold mb-3">{section.title}</h3>
-                <p className="text-gray-400 mb-4 line-clamp-2">
-                  {section.description}
-                </p>
-                <div className="flex items-center text-yellow-500 font-medium">
-                  <span>Read more</span>
-                  <ArrowRight size={16} className="ml-2" />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Column - Selected Content */}
-          <div className="lg:w-2/3">
-            <div className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-all duration-500">
-              <div className="lg:flex">
-                <div className="lg:w-1/2 p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="text-5xl text-gray-700 font-bold">
-                      {sections[currentSection].number}
-                    </div>
-                    <div className="h-px w-16 bg-yellow-500"></div>
-                    <div className="text-yellow-500">
-                      {sections[currentSection].category}
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">
-                    {sections[currentSection].title}
-                  </h3>
-                  <p className="text-gray-300 mb-6">
-                    {sections[currentSection].description}
-                  </p>
-                  <div className="flex items-center text-yellow-500 font-medium">
-                    <span>Read more</span>
-                    <ArrowRight size={16} className="ml-2" />
-                  </div>
-                </div>
-                <div className="lg:w-1/2 h-64 lg:h-auto">
-                  <div className="w-full h-full bg-gray-700 flex items-center justify-center">
-                    <img
-                      src={das4.src}
-                      alt="Trucking services illustration"
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="flex flex-col md:flex-row bg-gray-900 text-white mb-16 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02]">
+      <div className="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+        <div className="relative h-64 md:h-full w-full">
+          <Image
+            src={imageSrc}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="h-full w-full"
+          />
         </div>
       </div>
-
-      {/* Services Section */}
-      <div className="container mx-auto px-4 md:px-8 py-16">
-        <h2 className="text-3xl font-bold mb-12">Our Trucking Services</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`bg-gray-800 rounded-lg p-6 shadow-lg transition-all duration-500 transform ${
-                animateServices
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-8 opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-start mb-4">
-                <div className="bg-yellow-500 p-2 rounded-full mr-4">
-                  <ArrowRight size={18} className="text-gray-900" />
-                </div>
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-              </div>
-              <p className="text-gray-300 text-sm ml-12">
-                {service.description}
-              </p>
+      <div
+        className="md:w-1/2 p-8 flex flex-col justify-center"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <div className="mb-6">
+          <div
+            className="flex items-center"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div className="text-6xl text-gray-700 font-bold mr-4">
+              {number}
             </div>
-          ))}
+            <div className="h-1 w-16 bg-yellow-500 mr-4"></div>
+            <div className="text-yellow-500">{category}</div>
+          </div>
+          <h2
+            className="text-4xl font-bold mt-2 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            {title}
+          </h2>
+          <p
+            className="text-gray-300"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            {description}
+          </p>
+          <br />
+          <p
+            className="text-gray-300"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            {description1}
+          </p>
         </div>
       </div>
     </div>
   );
-}
+};
+
+const ServiceCardAlternate: React.FC<ServiceCardProps> = ({
+  number,
+  category,
+  title,
+  description,
+  description1,
+  imageSrc,
+}) => {
+  return (
+    <div className="flex flex-col md:flex-row-reverse bg-gray-900 text-white mb-16 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02]">
+      <div className="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+        <div className="relative h-64 md:h-full w-full">
+          <Image
+            src={imageSrc}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="h-full w-full"
+          />
+        </div>
+      </div>
+      <div
+        className="md:w-1/2 p-8 flex flex-col justify-center"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <div className="mb-6">
+          <div
+            className="flex items-center"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div className="text-6xl text-gray-700 font-bold mr-4">
+              {number}
+            </div>
+            <div className="h-1 w-16 bg-yellow-500 mr-4"></div>
+            <div className="text-yellow-500">{category}</div>
+          </div>
+          <h2
+            className="text-4xl font-bold mt-2 mb-4"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            {title}
+          </h2>
+          <p
+            className="text-gray-300"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            {description}
+          </p>
+          <br />
+          <p
+            className="text-gray-300"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
+            {description1}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const TruckingServiceCards: React.FC = () => {
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      easing: "ease-in-out",
+    });
+  }, []);
+
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <div
+        className="text-center mb-16"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <h1 className="text-5xl font-bold text-white mb-6">
+          Trucking Business Services
+        </h1>
+        <div className="h-1 w-24 bg-yellow-500 mx-auto"></div>
+        <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
+          Discover comprehensive services designed to help your trucking
+          business operate efficiently, reduce costs, and maximize
+          profitability.
+        </p>
+      </div>
+
+      {serviceData.map((service, index) =>
+        index % 2 === 0 ? (
+          <ServiceCard
+            key={index}
+            number={service.number}
+            category={service.category}
+            title={service.title}
+            description={service.description}
+            description1={service.description1}
+            imageSrc={service.imageSrc}
+          />
+        ) : (
+          <ServiceCardAlternate
+            key={index}
+            number={service.number}
+            category={service.category}
+            title={service.title}
+            description={service.description}
+            description1={service.description1}
+            imageSrc={service.imageSrc}
+          />
+        )
+      )}
+    </div>
+  );
+};
+
+export default TruckingServiceCards;
