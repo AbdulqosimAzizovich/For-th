@@ -55,15 +55,15 @@ const AboutUs = () => {
             <p className="text-lg mb-6">
               Vabank MC Sale was founded by industry veterans who recognized the
               challenges that trucking company owners face when buying or
-              selling their businesses. With over 25 years of combined
-              experience in the transportation industry, our team has built a
-              reliable marketplace that simplifies the complex process of MC
-              authority transfers.
+              selling their businesses. With over 8 years of combined experience
+              in the transportation industry, our team has built a reliable
+              marketplace that simplifies the complex process of MC authority
+              transfers.
             </p>
             <p className="text-lg mb-6">
               What started as a small brokerage has grown into the leading
               platform for trucking company transactions, with more than 500
-              partners and thousands of successful transfers completed.
+              partners and 100+ of successful transfers completed.
             </p>
             <p className="text-lg">
               Our mission is to create a transparent, secure environment where
@@ -226,8 +226,8 @@ const AboutUs = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { number: "500+", label: "Partner Companies" },
-              { number: "1,200+", label: "Successful Transfers" },
-              { number: "7+", label: "Years in Business" },
+              { number: "100+", label: "Successful Transfers" },
+              { number: "8", label: "Years in Business" },
               { number: "98%", label: "Client Satisfaction" },
             ].map((stat, index) => (
               <motion.div
