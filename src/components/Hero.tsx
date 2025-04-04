@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Truck,
   Shield,
   Clock,
   CreditCard,
   MapPin,
   Activity,
+  Map,
+  Earth,
 } from "lucide-react";
 
 const HeroSection = () => {
@@ -17,8 +18,8 @@ const HeroSection = () => {
     {
       title: "Revolutionize Your Trucking Business",
       subtitle: "Seamless MC Authority Solutions",
-      background: "bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-900",
-      icon: Truck,
+      backgroundImage: "/das1.jpg", // Replace with your actual image path
+      icon: Earth,
       features: [
         { icon: Shield, text: "Verified Marketplace" },
         { icon: Clock, text: "Rapid Processing" },
@@ -32,7 +33,7 @@ const HeroSection = () => {
     {
       title: "Optimize Your Trucking Fleet with Aged MC authority",
       subtitle: "Comprehensive Business Support",
-      background: "bg-gradient-to-r from-green-900 via-teal-800 to-emerald-900",
+      backgroundImage: "/das2.jpg", // Replace with your actual image path
       icon: MapPin,
       features: [
         { icon: Activity, text: "Strategic Connections" },
@@ -47,8 +48,8 @@ const HeroSection = () => {
     {
       title: "Transform Your Trucking Enterprise",
       subtitle: "Advanced MC Authority Management",
-      background: "bg-gradient-to-r from-red-900 via-orange-800 to-amber-900",
-      icon: Truck,
+      backgroundImage: "/das4.jpg", // Replace with your actual image path
+      icon: Map,
       features: [
         { icon: Shield, text: "Expert Consultation" },
         { icon: Clock, text: "Quick Deployment" },
@@ -70,7 +71,7 @@ const HeroSection = () => {
   };
 
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 5000);
+    const slideInterval = setInterval(nextSlide, 10000); // Change slide every 10 seconds
     return () => clearInterval(slideInterval);
   }, []);
 
@@ -83,7 +84,12 @@ const HeroSection = () => {
             currentSlide === index
               ? "opacity-100 scale-100"
               : "opacity-0 scale-110"
-          } ${slide.background}`}
+          }`}
+          style={{
+            backgroundImage: `url(${slide.backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
           {/* Overlay with subtle texture */}
           <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
@@ -118,10 +124,10 @@ const HeroSection = () => {
                   </div>
 
                   <div className="flex space-x-4">
-                    <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+                    <button className="bg-white cursor-pointer text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
                       {slide.cta.primary}
                     </button>
-                    <button className="border-2 border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+                    <button className="border-2 cursor-pointer border-white/50 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
                       {slide.cta.secondary}
                     </button>
                   </div>
@@ -136,13 +142,13 @@ const HeroSection = () => {
       <div className="absolute z-20 top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
         <button
           onClick={prevSlide}
-          className="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm"
+          className="bg-white/10 cursor-pointer hover:bg-white/20 p-3 rounded-full backdrop-blur-sm"
         >
           <ChevronLeft size={24} className="text-white" />
         </button>
         <button
           onClick={nextSlide}
-          className="bg-white/10 hover:bg-white/20 p-3 rounded-full backdrop-blur-sm"
+          className="bg-white/10 cursor-pointer hover:bg-white/20 p-3 rounded-full backdrop-blur-sm"
         >
           <ChevronRight size={24} className="text-white" />
         </button>
@@ -154,7 +160,7 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition ${
+            className={`w-3 h-3 rounded-full transition cursor-pointer ${
               currentSlide === index
                 ? "bg-white scale-125"
                 : "bg-white/50 hover:bg-white/70"

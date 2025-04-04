@@ -33,12 +33,12 @@ export default function Header() {
           <Link href="/about" className="hover:text-blue-400 transition">
             About us
           </Link>
-          <Link href="/services" className="hover:text-blue-400 transition">
+          {/* <Link href="/services" className="hover:text-blue-400 transition">
             Services
           </Link>
           <Link href="/blog" className="hover:text-blue-400 transition">
             Blog
-          </Link>
+          </Link> */}
           <Link href="/#footer" className="hover:text-blue-400 transition">
             Contacts
           </Link>
@@ -77,7 +77,7 @@ export default function Header() {
               >
                 About us
               </Link>
-              <Link
+              {/* <Link
                 href="/services"
                 className="py-2 hover:text-blue-400 transition"
               >
@@ -88,7 +88,7 @@ export default function Header() {
                 className="py-2 hover:text-blue-400 transition"
               >
                 Blog
-              </Link>
+              </Link> */}
               <Link
                 href="/#footer"
                 className="py-2 hover:text-blue-400 transition"
