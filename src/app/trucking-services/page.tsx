@@ -44,18 +44,9 @@ const serviceData: ServiceCardProps[] = [
       "For instance, some of our insurance partners offer policies that bundle cargo insurance, liability coverage, and physical damage protection, allowing you to save more compared to purchasing separate plans. We also help businesses find insurance plans with lower deductibles or accident forgiveness programs, reducing financial strain in case of an incident. If you operate in high-risk areas or transport hazardous materials, we ensure you get specialized coverage that meets federal and state regulations. Furthermore, we work with insurers who provide 24/7 claims support, ensuring fast resolution in case of accidents or damages.",
     imageSrc: "/Contract3.jpg",
   },
+
   {
     number: "04",
-    category: "Factoring Companies with Low Fees",
-    title: "Factoring Companies with Low Fees",
-    description:
-      "Keeping cash flow steady is important. We help you find factoring companies that take a smaller percentage from your earnings, so you keep more of your money. These companies also offer flexible terms and fast payments to help your business stay on track. Instead of waiting weeks for payments, factoring services allow you to access funds within 24 to 48 hours, improving your financial stability. Our partners have transparent pricing, with no hidden fees, so you always know what to expect. Additionally, factoring can help cover expenses like fuel, maintenance, and payroll, ensuring smooth operations without financial stress.",
-    description1:
-      "For instance, we work with factoring companies that offer rates as low as 1-3%, allowing you to retain more of your hard-earned revenue. Some factoring services also provide non-recourse options, meaning they take on the risk if a broker or shipper fails to pay. This added security ensures that your business remains financially stable even if a client defaults. Many factoring companies also offer fuel card programs, further helping with day-to-day operating costs. With these benefits, businesses can maintain cash flow and avoid the stress of delayed payments.",
-    imageSrc: "/Contract.jpg",
-  },
-  {
-    number: "05",
     category: "Team Building",
     title: "Factoring Companies with Low Fees",
     description:
@@ -66,7 +57,7 @@ const serviceData: ServiceCardProps[] = [
     imageSrc: "/Contract2.jpg",
   },
   {
-    number: "06",
+    number: "05",
     category: "Experienced and Reliable Truck Drivers",
     title: "Experienced and Reliable Truck Drivers",
     description:
@@ -76,7 +67,7 @@ const serviceData: ServiceCardProps[] = [
     imageSrc: "/Contract3.jpg",
   },
   {
-    number: "07",
+    number: "06",
     category: "Dispatch Services to Increase Your Earnings",
     title: "Dispatch Services to Increase Your Earnings",
     description:
@@ -87,7 +78,7 @@ const serviceData: ServiceCardProps[] = [
     imageSrc: "/Contract.jpg",
   },
   {
-    number: "09",
+    number: "07",
     category: "Trucking-Focused Accounting Services",
     title: "Trucking-Focused Accounting Services",
     description:
