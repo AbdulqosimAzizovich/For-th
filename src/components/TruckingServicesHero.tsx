@@ -50,14 +50,14 @@ const TruckingServicesHero: React.FC = () => {
               for Sale
             </h1>
             <p className="text-gray-300 text-lg mb-8">
-              We make it easy to buy aged MC authorities. Whether you're
+              We make it easy to buy aged MC authorities. Whether you&apos;re
               starting out or expanding your fleet, we connect you with the best
               options available.
               <br />
               <br />
-              We offer simple, effective solutions for trucking businesses - like
-              fuel discounts, insurance help, and more. Everything you need to
-              keep your trucks moving and your business growing.
+              We offer simple, effective solutions for trucking businesses -
+              like fuel discounts, insurance help, and more. Everything you need
+              to keep your trucks moving and your business growing.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
