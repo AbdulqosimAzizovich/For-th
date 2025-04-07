@@ -45,13 +45,19 @@ const TruckingServicesHero: React.FC = () => {
             data-aos-duration="1000"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Integrated Services and Solutions for the{" "}
-              <span className="text-blue-500">Trucking Industry</span>
+              Helping You Find the Right Aged{" "}
+              <span className="text-blue-500">MC Authority </span>
+              for Sale
             </h1>
             <p className="text-gray-300 text-lg mb-8">
-              Access a comprehensive suite of services designed specifically for
-              trucking companies. From fuel savings to insurance, discover how
-              we can help your business thrive.
+              We make it easy to buy aged MC authorities. Whether you're
+              starting out or expanding your fleet, we connect you with the best
+              options available.
+              <br />
+              <br />
+              We offer simple, effective solutions for trucking businesses - like
+              fuel discounts, insurance help, and more. Everything you need to
+              keep your trucks moving and your business growing.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
