@@ -92,7 +92,7 @@ const HeroSection = () => {
           }}
         >
           {/* Overlay with subtle texture */}
-          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
 
           <div className="relative container mx-auto px-6 h-full flex items-center">
             <div className="max-w-4xl text-white relative z-10">
