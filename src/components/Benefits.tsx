@@ -1,7 +1,7 @@
 // components/Benefits.tsx
 import React, { useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, Truck, Shield, DollarSign, FileCheck } from "lucide-react";
+import { Truck, Shield, DollarSign, FileCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 
@@ -114,7 +114,7 @@ interface FeatureCardProps {
   index: number;
 }
 
-const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
+const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
