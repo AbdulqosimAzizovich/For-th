@@ -9,122 +9,37 @@ interface ServiceCardProps {
   category: string;
   title: string;
   description: string;
-  description1: string;
   imageSrc: string;
 }
 
-const serviceData: ServiceCardProps[] = [
+const benefitsData: ServiceCardProps[] = [
   {
     number: "01",
-    category: "Getting started",
-    title: "Fuel Cards with Maximum Discounts for Trucking Businesses",
-    description:
-      "We help you get fuel cards that offer bigger discounts than most, helping you save more money. These cards also have easy payment options and are accepted in many places, making them a great choice for your business. By using these fuel cards, you can better manage your fuel expenses, track your spending, and reduce overall operational costs. Many of our partnered fuel card providers also offer cashback rewards and loyalty programs, giving you additional savings over time. With nationwide coverage, you don’t have to worry about finding a station that accepts your card, ensuring convenience wherever your route takes you.",
-    description1:
-      "For example, some of our fuel card partners provide discounts of up to $0.50 per gallon at major truck stops like Pilot, Flying J, and Love’s. These savings add up significantly over time, especially for owner-operators and small fleets. Additionally, many of these cards allow you to set spending limits for drivers, ensuring better financial control. Some fuel cards even offer expense tracking features, which help streamline bookkeeping and tax reporting. By leveraging these benefits, trucking businesses can cut costs while improving financial efficiency.",
-    imageSrc: "/Contract.jpg",
-  },
-  {
-    number: "02",
-    category: "Affordable and Reliable Insurance",
-    title: "Cost-Effective Insurance Solutions for Trucking Companies",
-    description:
-      "We help you find insurance at a lower cost while still getting the protection you need. We work with trusted insurance companies that offer plans designed for your specific needs, so you don’t overpay. Our team understands the unique risks associated with the trucking industry and ensures you receive coverage that protects your business, vehicles, and drivers. We help you compare multiple insurance options, making sure you get the best value for your money. Additionally, we connect you with providers who offer flexible payment plans, making it easier to manage your expenses.",
-    description1:
-      "For instance, some of our insurance partners offer policies that bundle cargo insurance, liability coverage, and physical damage protection, allowing you to save more compared to purchasing separate plans. We also help businesses find insurance plans with lower deductibles or accident forgiveness programs, reducing financial strain in case of an incident. If you operate in high-risk areas or transport hazardous materials, we ensure you get specialized coverage that meets federal and state regulations. Furthermore, we work with insurers who provide 24/7 claims support, ensuring fast resolution in case of accidents or damages.",
-    imageSrc: "/Contract2.jpg",
-  },
-  {
-    number: "03",
-    category: "Easy and Affordable ELD Solutions",
-    title: "Easy and Affordable ELD Solutions",
-    description:
-      "Following the Electronic Logging Device (ELD) rules is important for your business. We connect you with trusted ELD providers that offer low-cost solutions with great customer support. They help with setup and provide ongoing assistance to keep everything running smoothly. These ELD solutions ensure compliance with federal regulations, avoiding costly fines and penalties. Our partners offer user-friendly systems that are easy to install and operate, reducing downtime and training time for your drivers. Additionally, the ELDs provide real-time tracking and reporting features, helping you monitor fleet performance and improve efficiency.",
-    description1:
-      "For instance, some of our insurance partners offer policies that bundle cargo insurance, liability coverage, and physical damage protection, allowing you to save more compared to purchasing separate plans. We also help businesses find insurance plans with lower deductibles or accident forgiveness programs, reducing financial strain in case of an incident. If you operate in high-risk areas or transport hazardous materials, we ensure you get specialized coverage that meets federal and state regulations. Furthermore, we work with insurers who provide 24/7 claims support, ensuring fast resolution in case of accidents or damages.",
-    imageSrc: "/Contract3.jpg",
-  },
-
-  {
-    number: "04",
-    category: "Team Building",
-    title: "Factoring Companies with Low Fees",
-    description:
-      "Keeping cash flow steady is important. We help you find factoring companies that take a smaller percentage from your earnings, so you keep more of your money. These companies also offer flexible terms and fast payments to help your business stay on track. Instead of waiting weeks for payments, factoring services allow you to access funds within 24 to 48 hours, improving your financial stability. Our partners have transparent pricing, with no hidden fees, so you always know what to expect. Additionally, factoring can help cover expenses like fuel, maintenance, and payroll, ensuring smooth operations without financial stress.",
-    description1:
-      "For example, our ELD partners provide solutions that integrate with fleet management software, allowing businesses to track fuel usage, route efficiency, and driver behavior. Many of these ELDs offer mobile apps that drivers can use to log their hours effortlessly, reducing paperwork and ensuring accuracy. Some providers also offer automated alerts for HOS (Hours of Service) violations, helping drivers stay compliant. Additionally, our partners offer training sessions and 24/7 technical support, making the transition to ELD compliance seamless for businesses of all sizes.",
-
-    imageSrc: "/Contract2.jpg",
-  },
-  {
-    number: "05",
-    category: "Experienced and Reliable Truck Drivers",
-    title: "Experienced and Reliable Truck Drivers",
-    description:
-      "Whether you need company drivers, lease operators, or owner-operators, we help you find experienced and well-trained drivers who meet industry standards. This helps your business run safely and efficiently. Our network includes skilled drivers who have undergone thorough background checks, ensuring they meet safety and compliance requirements. We also connect you with drivers who have experience in specific freight types, whether it’s refrigerated goods, dry vans, or hazardous materials. Additionally, by hiring the right drivers, you can reduce turnover rates and build a more reliable and productive team.",
-    description1:
-      "For example, our hiring partners conduct extensive screening, including driving record checks, drug tests, and previous employment verification, to ensure only the most qualified drivers join your fleet. We also match businesses with drivers who hold specialized endorsements, such as Hazmat or Tanker certifications, for companies dealing with sensitive cargo. Some of our partners offer driver retention programs, helping businesses reduce turnover by improving job satisfaction. By working with us, you gain access to a pool of skilled drivers who are committed to safety and professionalism.",
-    imageSrc: "/Contract3.jpg",
-  },
-  {
-    number: "06",
-    category: "Dispatch Services to Increase Your Earnings",
-    title: "Dispatch Services to Increase Your Earnings",
-    description:
-      "We work with expert dispatchers who can book higher-paying loads and plan better routes. This means more money for you, fewer empty miles, and on-time deliveries. Our dispatch partners have strong relationships with shippers and brokers, giving you access to better freight opportunities. They also use advanced route optimization tools to reduce fuel costs and minimize downtime. Additionally, having a dedicated dispatcher allows you to focus on driving while they handle negotiations, paperwork, and scheduling to keep your business running smoothly.",
-    description1:
-      "For example, our dispatchers have access to premium load boards and industry connections that help secure more profitable routes. They negotiate on your behalf to get better rates per mile, ensuring your business remains competitive. Some dispatch services also provide load planning strategies to minimize deadhead miles, saving fuel and maximizing profits. With 24/7 support, dispatchers can quickly resolve any issues that arise, keeping operations running efficiently.",
-
-    imageSrc: "/Contract.jpg",
-  },
-  {
-    number: "07",
-    category: "Trucking-Focused Accounting Services",
-    title: "Trucking-Focused Accounting Services",
-    description:
-      "Managing finances can be tough in the trucking business. We connect you with accountants who specialize in trucking. They help you keep track of your finances, follow all rules, and stay organized so you can focus on running your business. Our accounting partners offer services such as tax preparation, expense tracking, and financial planning tailored specifically for trucking companies. They help ensure compliance with IRS regulations and prevent costly mistakes. Additionally, by having a clear financial strategy, you can maximize profits, reduce tax liabilities, and plan for future growth.",
-    description1:
-      "For example, our accounting experts can help you take advantage of tax deductions specific to the trucking industry, such as per diem allowances, fuel expenses, and depreciation. They also assist with IFTA reporting, ensuring compliance with fuel tax regulations across state lines. Many of our partners provide bookkeeping software integration, making it easy to track profits and expenses in real-time. By working with professionals who understand trucking finances, you can avoid penalties and keep your business financially secure.",
-
-    imageSrc: "/Contract2.jpg",
-  },
-  {
-    number: "08",
-    category: "Safety and Compliance Services",
-    title: "Safety and Compliance Services",
-    description:
-      "Staying safe and following trucking laws is very important. We help you find safety experts who offer driver training, vehicle inspections, and compliance services. This helps lower risks and keeps your fleet running safely. Our safety partners provide ongoing support, including audits and compliance reviews, to ensure you meet DOT and FMCSA regulations. They also offer customized safety programs to reduce accidents and improve driver awareness. By prioritizing safety, you not only avoid penalties but also improve your company’s reputation, making it easier to secure more contracts and long-term success.",
-    description1:
-      "For instance, our safety consultants conduct mock DOT audits, helping businesses prepare for official inspections and avoid costly violations. They also provide ongoing driver education, ensuring that employees stay up to date on new industry regulations. Some partners offer telematics solutions that monitor driver behavior, helping businesses identify areas for improvement. Investing in safety not only protects drivers but also enhances overall efficiency and profitability.",
-    imageSrc: "/Contract3.jpg",
-  },
-];
-
-const benefitsData = [
-  {
-    number: "01",
-    title: " Access to Multiple MC Numbers",
+    category: "Getting Started",
+    title: "Access to Multiple MC Numbers",
     description:
       "We maintain one of the largest private databases of aged MC authorities available on the market. Our listings cover all 50 states and include authorities for various operational types—whether you're planning to run dry van, reefer, flatbed, or specialized freight. You can choose based on the age of the authority (6 months, 1 year, 2+ years), its safety history, insurance status, and more. Each listing is verified for clean records, and we can provide supporting documents upon request. The search process is made simple with our team offering support to help you navigate the best match for your business goals. We update our inventory frequently to ensure fresh, high-quality options are available at all times. Whether you're buying your first MC or expanding with multiple authorities, you'll find what you need through our network.",
     imageSrc: "/Contract.jpg",
   },
   {
     number: "02",
-
+    category: "Payment & Transactions",
     title: "Multiple Payment Options, Including Zelle, Wire, ACH, and More",
     description:
       "We understand how important it is to have flexible and secure payment options, especially when making a large business investment. That’s why we offer a wide range of methods including Zelle, wire transfers, ACH payments, and more to meet your preferences. All of our payment channels are encrypted and verified for security to ensure that your transaction is safe. You’ll also receive clear invoices and receipts with every payment, giving you a full paper trail for your records. Our team is available to walk you through any payment process and answer questions if you’re unfamiliar with a specific method. We make sure all payments are processed efficiently, minimizing delays in your transfer process. You can feel confident knowing you're paying securely and getting full documentation at each step.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/Contract2.jpg",
   },
   {
     number: "03",
+    category: "Cost Saving",
     title: "Save Money When You Buy More MC Numbers",
     description:
       "Planning to expand your fleet or invest in multiple authorities? We offer competitive bulk purchase discounts to help you save as you grow. The more MC authorities you purchase, the more you save—our tiered pricing structure is built for scalability. These discounts are ideal for logistics firms, fleet owners, or investors looking to establish subsidiary companies. With multiple purchases, you'll receive a dedicated account manager who will coordinate the transfers and ensure everything is completed efficiently. We also help plan your acquisitions strategically, so you're not just saving money, but getting the right types of authorities for your operations. Discounts can significantly lower your per-authority cost, which can be reinvested into insurance, equipment, or onboarding. Whether you're buying 2 or 20 MC numbers, our bulk pricing helps you get more for less.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/Contract3.jpg",
   },
   {
     number: "04",
+    category: "Insurance Benefits",
     title: "Lower Insurance Costs with Aged MC Numbers",
     description:
       "One of the biggest benefits of buying an aged MC authority is the potential for lower insurance premiums. Insurance providers often charge less for established authorities, especially those with clean histories and no claims. This could save you anywhere from 15% to 30% on your monthly insurance costs—an important advantage for any new business owner. We pre-screen all our MC listings for compliance and cleanliness, which makes them more attractive to insurers. This can also make your insurance approval process much faster and less complicated. In many cases, you’ll also gain access to better terms, such as higher coverage limits or fewer restrictions. With an aged authority, you’re not only getting a faster start, you’re also saving significantly on long-term operating expenses.",
@@ -132,20 +47,23 @@ const benefitsData = [
   },
   {
     number: "05",
+    category: "Transparency & Trust",
     title: "No Hidden Fees",
     description:
       "Transparency is at the core of our business. We believe in honest pricing with no hidden costs or surprise fees after the sale. Before you make a purchase, you’ll receive a detailed quote that includes every charge—transfer fees, documentation, legal costs, and any other applicable service. Once you commit, that’s the final price—no extra charges later. We never tack on last-minute fees or leave you guessing about what you’re paying for. Our full-service approach means everything is clearly outlined from the beginning, and your satisfaction is guaranteed. This level of transparency builds trust and makes the process smoother for you, allowing you to focus on launching your business instead of managing unexpected costs.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/Contract2.jpg",
   },
   {
     number: "06",
+    category: "Consultation & Support",
     title: "We Analyze Your Needs and Recommend the Right MC Number",
     description:
       "Choosing the right MC authority is more than just picking a number — it’s about finding one that aligns with your long-term goals and operational needs. That’s why we take the time to get to know your business plan, route preferences, equipment, and freight types. Based on your unique situation, our experts recommend MC numbers that are the best fit, saving you the guesswork. We consider factors like age of authority, region, insurance appeal, and more to ensure compatibility. If you're unsure what to choose, we'll walk you through the pros and cons of different options. This personalized approach means you're not just buying any MC—you’re investing in one that can help your business grow sustainably. Our clients often say this custom analysis is one of the most valuable parts of our service.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/Contract3.jpg",
   },
   {
     number: "07",
+    category: "Legal Compliance",
     title:
       "Transition of MC Authority According to the Law and FMCSA Regulations",
     description:
@@ -154,20 +72,23 @@ const benefitsData = [
   },
   {
     number: "08",
+    category: "Reputation & Trust",
     title: "Trusted by Hundreds of Carriers",
     description:
       "Over the past decade, we’ve built a strong reputation by helping thousands of drivers and carriers across the country. Our client base includes solo owner-operators, growing fleets, and investors—all of whom trust us to deliver what we promise. We’re proud to maintain a 4.9-star satisfaction rating thanks to our honest service, detailed communication, and proven results. Most of our business comes from referrals and repeat customers, which speaks volumes about the value we provide. Every transaction is handled with professionalism and care, regardless of order size. When you work with us, you're not just another customer—you’re part of a growing community of successful trucking entrepreneurs. We’re here to support you at every stage, from purchase to long-term business growth.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/Contract2.jpg",
   },
   {
     number: "09",
+    category: "Consultation & Support",
     title: "Custom Consultation",
     description:
       "Navigating the MC authority market can be confusing—but you don’t have to do it alone. Our team offers personalized consultations to help you understand your options and make informed decisions. We take time to explain how different authorities perform, what insurance companies look for, and how operational history can affect your success. Whether you're buying your first MC or growing a multi-truck business, we tailor our advice to fit your vision. We answer your questions, offer strategic insights, and help you feel confident in your purchase. You’ll walk away with clarity and a solid game plan to launch or grow your company. It's not just a consultation—it’s a roadmap for your next big move.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/Contract3.jpg",
   },
   {
     number: "10",
+    category: "Fast Start Opportunities",
     title: "Amazon Relay Ready Options",
     description:
       "Want to haul Amazon, Jb Hunt, Schneider freights without delays? We offer MC authorities that are already approved for Amazon Relay, JbHunt and others so you can bypass the usual wait and start earning faster. These authorities meet all of Amazon’s operational and compliance standards, allowing for immediate onboarding. With Amazon loads in high demand, being ready on day one gives you a major head start over the competition. Our team verifies each Relay-ready MC to ensure it’s up to date and qualified. You’ll also receive guidance on how to get connected with Amazon’s load board and start bidding right away. This is an excellent option if you're looking for steady, high-paying freight with a trusted shipper. It's one of the fastest ways to start generating revenue with your new authority.",
@@ -180,7 +101,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   category,
   title,
   description,
-  description1,
   imageSrc,
 }) => {
   return (
@@ -231,15 +151,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           >
             {description}
           </p>
-          <br />
-          <p
-            className="text-gray-300"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="600"
-          >
-            {description1}
-          </p>
         </div>
       </div>
     </div>
@@ -251,7 +162,6 @@ const ServiceCardAlternate: React.FC<ServiceCardProps> = ({
   category,
   title,
   description,
-  description1,
   imageSrc,
 }) => {
   return (
@@ -302,22 +212,13 @@ const ServiceCardAlternate: React.FC<ServiceCardProps> = ({
           >
             {description}
           </p>
-          <br />
-          <p
-            className="text-gray-300"
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="600"
-          >
-            {description1}
-          </p>
         </div>
       </div>
     </div>
   );
 };
 
-const TruckingServiceCards: React.FC = () => {
+const BenefitsServiceCards: React.FC = () => {
   useEffect(() => {
     // Initialize AOS
     AOS.init({
@@ -336,17 +237,15 @@ const TruckingServiceCards: React.FC = () => {
         data-aos-duration="1200"
       >
         <h1 className="text-5xl font-bold text-white mb-6">
-          Trucking Business Services
+          Purchase Now: Aged MC Authority from a Verified and Experienced Team
         </h1>
         <div className="h-1 w-24 bg-yellow-500 mx-auto"></div>
         <p className="text-gray-300 mt-6 max-w-2xl mx-auto">
-          Discover comprehensive services designed to help your trucking
-          business operate efficiently, reduce costs, and maximize
-          profitability.
+          Benefits of working with us:
         </p>
       </div>
 
-      {serviceData.map((service, index) =>
+      {benefitsData.map((service, index) =>
         index % 2 === 0 ? (
           <ServiceCard
             key={index}
@@ -354,7 +253,6 @@ const TruckingServiceCards: React.FC = () => {
             category={service.category}
             title={service.title}
             description={service.description}
-            description1={service.description1}
             imageSrc={service.imageSrc}
           />
         ) : (
@@ -364,7 +262,6 @@ const TruckingServiceCards: React.FC = () => {
             category={service.category}
             title={service.title}
             description={service.description}
-            description1={service.description1}
             imageSrc={service.imageSrc}
           />
         )
@@ -373,4 +270,4 @@ const TruckingServiceCards: React.FC = () => {
   );
 };
 
-export default TruckingServiceCards;
+export default BenefitsServiceCards;

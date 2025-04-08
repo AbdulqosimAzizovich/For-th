@@ -81,7 +81,7 @@ const TruckingServicesHero: React.FC = () => {
                 </svg>
               </Link>
               <Link
-                href="/contact"
+                href="/#footer"
                 className="border-2 border-white hover:border-blue-500 text-white hover:text-blue-500 font-bold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center"
               >
                 Contact Us

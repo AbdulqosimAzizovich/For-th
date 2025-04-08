@@ -19,26 +19,34 @@ export const useNavigation = () => useContext(NavigationContext);
 
 function NavigationEvents() {
   const [isNavigating, setIsNavigating] = useState(false);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  // For initial page load
+  // For initial page load - faqat klient tomonda ishlaydi
   useEffect(() => {
-    setIsNavigating(true);
-    const timer = setTimeout(() => setIsNavigating(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    if (isFirstLoad) {
+      setIsNavigating(true);
+      const timer = setTimeout(() => {
+        setIsNavigating(false);
+        setIsFirstLoad(false);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [isFirstLoad]);
 
   // For subsequent navigations
   useEffect(() => {
-    setIsNavigating(true);
-    const timer = setTimeout(() => setIsNavigating(false), 800);
-    return () => clearTimeout(timer);
-  }, [pathname, searchParams]);
+    if (!isFirstLoad) {
+      setIsNavigating(true);
+      const timer = setTimeout(() => setIsNavigating(false), 800);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname, searchParams, isFirstLoad]);
 
   return (
     <NavigationContext.Provider value={{ isNavigating }}>
-      <PageLoader />
+      {isNavigating && <PageLoader />}
     </NavigationContext.Provider>
   );
 }
@@ -48,10 +56,21 @@ export function NavigationEventsProvider({
 }: {
   children: ReactNode;
 }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Faqat klient tomonda render qilish
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <Suspense fallback={<PageLoader />}>
-      <NavigationEvents />
+    <>
+      {isMounted && (
+        <Suspense fallback={<PageLoader />}>
+          <NavigationEvents />
+        </Suspense>
+      )}
       {children}
-    </Suspense>
+    </>
   );
 }
