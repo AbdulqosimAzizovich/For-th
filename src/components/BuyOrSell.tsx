@@ -41,26 +41,26 @@ const TruckingMarketplace = () => {
   };
 
   // New function to handle navigation - you can customize this based on your needs
-  const handleContactRequest = () => {
-    // You can implement your custom navigation logic here
-    // For example:
-    // 1. Scroll to a contact form section
-    const contactSection = document.getElementById("contact-section");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
+  // const handleContactRequest = () => {
+  //   // You can implement your custom navigation logic here
+  //   // For example:
+  //   // 1. Scroll to a contact form section
+  //   const contactSection = document.getElementById("contact-section");
+  //   if (contactSection) {
+  //     contactSection.scrollIntoView({ behavior: "smooth" });
+  //   }
 
-    // 2. Or you could show a modal dialog instead of navigating to another page
-    // if (typeof window !== 'undefined') {
-    //   // Set state to show modal
-    //   // This is just a placeholder for your actual modal implementation
-    // }
+  //   // 2. Or you could show a modal dialog instead of navigating to another page
+  //   // if (typeof window !== 'undefined') {
+  //   //   // Set state to show modal
+  //   //   // This is just a placeholder for your actual modal implementation
+  //   // }
 
-    // 3. Or you could use browser's history API for client-side navigation
-    // if (typeof window !== 'undefined') {
-    //   window.history.pushState({}, '', '/contact-us');
-    // }
-  };
+  //   // 3. Or you could use browser's history API for client-side navigation
+  //   // if (typeof window !== 'undefined') {
+  //   //   window.history.pushState({}, '', '/contact-us');
+  //   // }
+  // };
 
   const renderBenefitsList = (): JSX.Element => (
     <ul className="space-y-3 md:space-y-0 mb-4 md:mb-0 text-sm md:text-base flex-1 grid md:grid-cols-2 gap-4">
