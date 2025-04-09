@@ -44,7 +44,7 @@ export default function Header() {
           </Link>
           <div className="flex space-x-4">
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/mcsale_vabank?igsh=dTNrbzN3ZXBkaTVk&utm_source=qr"
               className="hover:text-blue-400 transition"
             >
               <Instagram size={20} />
@@ -56,7 +56,7 @@ export default function Header() {
               <Youtube size={20} />
             </Link>
             <Link
-              href="https://t.me"
+              href="https://t.me/mcforsalevabank"
               className="hover:text-blue-400 transition"
             >
               <Send size={20} />

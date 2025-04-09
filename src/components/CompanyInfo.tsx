@@ -157,7 +157,9 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
                     <h3 className="text-xl font-semibold text-gray-800">
                       {company.name}
                     </h3>
-                    <ExternalLink className="h-5 w-5 text-gray-400" />
+                    <a href="tel:+15136574858">
+                      <ExternalLink className="h-5 w-5 text-gray-400" />
+                    </a>
                   </div>
 
                   <div className="flex flex-wrap gap-4 mt-4">
@@ -189,19 +191,25 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
 
                   <div className="mt-4 flex items-center space-x-4">
                     <div className="cursor-pointer w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">
+                      <a
+                        href="https://www.instagram.com/mcsale_vabank?igsh=dTNrbzN3ZXBkaTVk&utm_source=qr"
+                        className="text-blue-600"
+                      >
                         <Instagram size={20} />
-                      </span>
+                      </a>
                     </div>
                     <div className="cursor-pointer w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">
+                      <a
+                        href="https://t.me/Thomas_Hiring"
+                        className="text-blue-600"
+                      >
                         <Send size={20} />
-                      </span>
+                      </a>
                     </div>
                     <div className="cursor-pointer w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">
+                      <a href="#" className="text-blue-600">
                         <Youtube size={20} />
-                      </span>
+                      </a>
                     </div>
                     <div className="ml-auto flex items-center">
                       <button
@@ -210,12 +218,12 @@ export default function CompanyInfo({ type }: CompanyInfoProps) {
                       >
                         Contact
                       </button>
-                      <a
+                      {/* <a
                         href={`tel:${company.phone.replace(/\s+/g, "")}`}
                         className="text-blue-600 font-medium"
                       >
                         {company.phone}
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>

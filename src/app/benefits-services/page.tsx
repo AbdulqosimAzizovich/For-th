@@ -27,7 +27,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "Multiple Payment Options, Including Zelle, Wire, ACH, and More",
     description:
       "We understand how important it is to have flexible and secure payment options, especially when making a large business investment. That’s why we offer a wide range of methods including Zelle, wire transfers, ACH payments, and more to meet your preferences. All of our payment channels are encrypted and verified for security to ensure that your transaction is safe. You’ll also receive clear invoices and receipts with every payment, giving you a full paper trail for your records. Our team is available to walk you through any payment process and answer questions if you’re unfamiliar with a specific method. We make sure all payments are processed efficiently, minimizing delays in your transfer process. You can feel confident knowing you're paying securely and getting full documentation at each step.",
-    imageSrc: "/Contract2.jpg",
+    imageSrc: "/benefits-services/bs2.png",
   },
   {
     number: "03",
@@ -35,7 +35,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "Save Money When You Buy More MC Numbers",
     description:
       "Planning to expand your fleet or invest in multiple authorities? We offer competitive bulk purchase discounts to help you save as you grow. The more MC authorities you purchase, the more you save—our tiered pricing structure is built for scalability. These discounts are ideal for logistics firms, fleet owners, or investors looking to establish subsidiary companies. With multiple purchases, you'll receive a dedicated account manager who will coordinate the transfers and ensure everything is completed efficiently. We also help plan your acquisitions strategically, so you're not just saving money, but getting the right types of authorities for your operations. Discounts can significantly lower your per-authority cost, which can be reinvested into insurance, equipment, or onboarding. Whether you're buying 2 or 20 MC numbers, our bulk pricing helps you get more for less.",
-    imageSrc: "/Contract3.jpg",
+    imageSrc: "/benefits-services/bs3.png",
   },
   {
     number: "04",
@@ -43,7 +43,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "Lower Insurance Costs with Aged MC Numbers",
     description:
       "One of the biggest benefits of buying an aged MC authority is the potential for lower insurance premiums. Insurance providers often charge less for established authorities, especially those with clean histories and no claims. This could save you anywhere from 15% to 30% on your monthly insurance costs—an important advantage for any new business owner. We pre-screen all our MC listings for compliance and cleanliness, which makes them more attractive to insurers. This can also make your insurance approval process much faster and less complicated. In many cases, you’ll also gain access to better terms, such as higher coverage limits or fewer restrictions. With an aged authority, you’re not only getting a faster start, you’re also saving significantly on long-term operating expenses.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/benefits-services/bs4.png",
   },
   {
     number: "05",
@@ -51,7 +51,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "No Hidden Fees",
     description:
       "Transparency is at the core of our business. We believe in honest pricing with no hidden costs or surprise fees after the sale. Before you make a purchase, you’ll receive a detailed quote that includes every charge—transfer fees, documentation, legal costs, and any other applicable service. Once you commit, that’s the final price—no extra charges later. We never tack on last-minute fees or leave you guessing about what you’re paying for. Our full-service approach means everything is clearly outlined from the beginning, and your satisfaction is guaranteed. This level of transparency builds trust and makes the process smoother for you, allowing you to focus on launching your business instead of managing unexpected costs.",
-    imageSrc: "/Contract2.jpg",
+    imageSrc: "/benefits-services/bs5.png",
   },
   {
     number: "06",
@@ -59,7 +59,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "We Analyze Your Needs and Recommend the Right MC Number",
     description:
       "Choosing the right MC authority is more than just picking a number — it’s about finding one that aligns with your long-term goals and operational needs. That’s why we take the time to get to know your business plan, route preferences, equipment, and freight types. Based on your unique situation, our experts recommend MC numbers that are the best fit, saving you the guesswork. We consider factors like age of authority, region, insurance appeal, and more to ensure compatibility. If you're unsure what to choose, we'll walk you through the pros and cons of different options. This personalized approach means you're not just buying any MC—you’re investing in one that can help your business grow sustainably. Our clients often say this custom analysis is one of the most valuable parts of our service.",
-    imageSrc: "/Contract3.jpg",
+    imageSrc: "/benefits-services/bs6.png",
   },
   {
     number: "07",
@@ -84,7 +84,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "Custom Consultation",
     description:
       "Navigating the MC authority market can be confusing—but you don’t have to do it alone. Our team offers personalized consultations to help you understand your options and make informed decisions. We take time to explain how different authorities perform, what insurance companies look for, and how operational history can affect your success. Whether you're buying your first MC or growing a multi-truck business, we tailor our advice to fit your vision. We answer your questions, offer strategic insights, and help you feel confident in your purchase. You’ll walk away with clarity and a solid game plan to launch or grow your company. It's not just a consultation—it’s a roadmap for your next big move.",
-    imageSrc: "/Contract3.jpg",
+    imageSrc: "/benefits-services/bs9.png",
   },
   {
     number: "10",
@@ -92,7 +92,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "Amazon Relay Ready Options",
     description:
       "Want to haul Amazon, Jb Hunt, Schneider freights without delays? We offer MC authorities that are already approved for Amazon Relay, JbHunt and others so you can bypass the usual wait and start earning faster. These authorities meet all of Amazon’s operational and compliance standards, allowing for immediate onboarding. With Amazon loads in high demand, being ready on day one gives you a major head start over the competition. Our team verifies each Relay-ready MC to ensure it’s up to date and qualified. You’ll also receive guidance on how to get connected with Amazon’s load board and start bidding right away. This is an excellent option if you're looking for steady, high-paying freight with a trusted shipper. It's one of the fastest ways to start generating revenue with your new authority.",
-    imageSrc: "/Contract.jpg",
+    imageSrc: "/benefits-services/bs10.png",
   },
 ];
 

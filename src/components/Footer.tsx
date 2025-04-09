@@ -4,7 +4,10 @@ import { Instagram, Youtube, Send, Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer id="footer" className="bg-gradient-to-b bg-gray-900 text-white to-black py-12">
+    <footer
+      id="footer"
+      className="bg-gradient-to-b bg-gray-900 text-white to-black py-12"
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -14,7 +17,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4 mt-6">
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/mcsale_vabank?igsh=dTNrbzN3ZXBkaTVk&utm_source=qr"
                 className="hover:text-blue-400 transition"
               >
                 <Instagram size={20} />
@@ -26,7 +29,7 @@ export default function Footer() {
                 <Youtube size={20} />
               </Link>
               <Link
-                href="https://t.me"
+                href="https://t.me/mcforsalevabank"
                 className="hover:text-blue-400 transition"
               >
                 <Send size={20} />
@@ -85,11 +88,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone size={16} className="mr-2 text-gray-400" />
-                <span>+998 99 123 45 67</span>
+                <span>+1 513 657-4858</span>
               </div>
               <div className="flex items-center">
                 <Mail size={16} className="mr-2 text-gray-400" />
-                <span>info@vabankmc.com</span>
+                <span>info@mcforsale.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-gray-400" />

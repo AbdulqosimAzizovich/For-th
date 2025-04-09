@@ -1,6 +1,5 @@
 import { JSX } from "react";
 import { DollarSign } from "lucide-react";
-import Link from "next/link";
 
 const TruckingMarketplace = () => {
   const buyDetails = {
@@ -39,6 +38,28 @@ const TruckingMarketplace = () => {
         text: "Amazon Relay Ready Options: Choose MC authorities that are pre-approved for Amazon Relay for faster operational start. These specially vetted authorities meet Amazon's stringent requirements and can immediately access lucrative Amazon freight opportunities. This gives you a significant competitive advantage, allowing you to start generating revenue faster without waiting through typical approval processes.",
       },
     ],
+  };
+
+  // New function to handle navigation - you can customize this based on your needs
+  const handleContactRequest = () => {
+    // You can implement your custom navigation logic here
+    // For example:
+    // 1. Scroll to a contact form section
+    const contactSection = document.getElementById("contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // 2. Or you could show a modal dialog instead of navigating to another page
+    // if (typeof window !== 'undefined') {
+    //   // Set state to show modal
+    //   // This is just a placeholder for your actual modal implementation
+    // }
+
+    // 3. Or you could use browser's history API for client-side navigation
+    // if (typeof window !== 'undefined') {
+    //   window.history.pushState({}, '', '/contact-us');
+    // }
   };
 
   const renderBenefitsList = (): JSX.Element => (
@@ -82,18 +103,14 @@ const TruckingMarketplace = () => {
               </p>
 
               {renderBenefitsList()}
-
-              <div className="flex flex-col items-center mt-8">
-                <Link
-                  href="/buy-companies"
-                  className="bg-[#2563EB] text-white px-10 py-4 rounded-xl hover:bg-[#1D4ED8] transition font-medium text-lg w-full md:w-auto text-center flex items-center justify-center"
-                >
-                  <DollarSign size={20} className="mr-2" /> Buy Business
-                </Link>
               </div>
-            </div>
           </div>
         </div>
+      </div>
+
+      {/* You can add a contact section here that the button scrolls to */}
+      <div id="contact-section" className="pt-16">
+        {/* Your contact form or information can go here */}
       </div>
     </div>
   );
