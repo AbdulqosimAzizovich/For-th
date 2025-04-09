@@ -1,5 +1,5 @@
 import { JSX } from "react";
-import { DollarSign } from "lucide-react";
+// import { DollarSign } from "lucide-react";
 
 const TruckingMarketplace = () => {
   const buyDetails = {
