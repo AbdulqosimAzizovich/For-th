@@ -43,7 +43,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "Lower Insurance Costs with Aged MC Numbers",
     description:
       "One of the biggest benefits of buying an aged MC authority is the potential for lower insurance premiums. Insurance providers often charge less for established authorities, especially those with clean histories and no claims. This could save you anywhere from 15% to 30% on your monthly insurance costs—an important advantage for any new business owner. We pre-screen all our MC listings for compliance and cleanliness, which makes them more attractive to insurers. This can also make your insurance approval process much faster and less complicated. In many cases, you’ll also gain access to better terms, such as higher coverage limits or fewer restrictions. With an aged authority, you’re not only getting a faster start, you’re also saving significantly on long-term operating expenses.",
-    imageSrc: "/benefits-services/bs4.png",
+    imageSrc: "/benefits-services/bs6.png",
   },
   {
     number: "05",
@@ -59,7 +59,7 @@ const benefitsData: ServiceCardProps[] = [
     title: "We Analyze Your Needs and Recommend the Right MC Number",
     description:
       "Choosing the right MC authority is more than just picking a number — it’s about finding one that aligns with your long-term goals and operational needs. That’s why we take the time to get to know your business plan, route preferences, equipment, and freight types. Based on your unique situation, our experts recommend MC numbers that are the best fit, saving you the guesswork. We consider factors like age of authority, region, insurance appeal, and more to ensure compatibility. If you're unsure what to choose, we'll walk you through the pros and cons of different options. This personalized approach means you're not just buying any MC—you’re investing in one that can help your business grow sustainably. Our clients often say this custom analysis is one of the most valuable parts of our service.",
-    imageSrc: "/benefits-services/bs6.png",
+    imageSrc: "/benefits-services/bs4.png",
   },
   {
     number: "07",
@@ -111,7 +111,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             src={imageSrc}
             alt={title}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             className="h-full w-full"
           />
         </div>
