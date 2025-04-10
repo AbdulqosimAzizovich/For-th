@@ -48,14 +48,14 @@ export default function Footer() {
                   About us
                 </Link>
               </li>
-              <li>
+{/*               <li>
                 <Link
                   href="/services"
                   className="text-gray-400 hover:text-white transition"
                 >
                   Services
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/buy-companies"
@@ -64,14 +64,14 @@ export default function Footer() {
                   Buy MC
                 </Link>
               </li>
-              <li>
+{/*               <li>
                 <Link
                   href="/sell-companies"
                   className="text-gray-400 hover:text-white transition"
                 >
                   Sell MC
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
@@ -96,7 +96,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start">
                 <MapPin size={16} className="mr-2 mt-1 text-gray-400" />
-                <span>There will be 20-30 MCs, they will rotate</span>
+                <span>423 Wards Corner Road,  Loveland OH 45140 </span>
               </div>
             </div>
           </div>
